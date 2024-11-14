@@ -5,6 +5,12 @@
   font-size: 13px;
 }
 
+@media (max-width: 400px) {
+  .card {
+    justify-content: center;
+  }
+}
+
 img {
   width: 140px;
   height: 140px;
@@ -23,6 +29,12 @@ img {
   left: 20px;
   position: absolute;
   transition: 0.5s;
+}
+
+@media (max-width: 400px) {
+  .add {
+    left:34%
+  }
 }
 
 .add:hover {
