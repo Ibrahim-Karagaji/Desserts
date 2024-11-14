@@ -1,8 +1,53 @@
-body {
-  display:grid;
-  grid-template-columns: 2fr 1fr;
-  margin:50px 70px;
+@import url("desserts-Card.css");
+@import url("prepare-order-style.css");
+
+* {
+  margin: 0px;
   padding: 0px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  margin: 30px 70px;
   font-family: "Work Sans", sans-serif;
-  background-color: rgba(255, 68, 0, 0.063);
+  background-color: rgba(255, 68, 0, 0.038);
+}
+
+@media (max-width: 970px) {
+  body {
+    margin: 30px 30px;
+  }
+}
+
+@media (max-width: 870px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+}
+
+@media (max-width: 400px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
