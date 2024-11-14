@@ -1,0 +1,65 @@
+.card {
+  display: grid;
+  gap: 23px;
+  position: relative;
+  font-size: 13px;
+}
+
+img {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: white;
+  border-radius: 20px;
+  border: brown solid 1px;
+  padding: 5px 8px;
+  top: 58%;
+  left: 20px;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.add:hover {
+  background-color: rgb(165, 42, 42);
+  border-color: black;
+}
+
+.add i {
+  color: brown;
+}
+
+.add:hover i {
+  color: white;
+}
+
+.add p {
+  font-size: 12px;
+}
+
+.add:hover p {
+  color: white;
+}
+
+.price {
+  display: grid;
+  gap: 6px;
+}
+
+.price span {
+  color: rgba(128, 128, 128, 0.725);
+}
+
+.price h4 {
+  font-weight: 100;
+}
+
+.price p {
+  color: brown;
+  font-weight: bold;
+}
