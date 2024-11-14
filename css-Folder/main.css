@@ -1,0 +1,8 @@
+body {
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  margin:50px 70px;
+  padding: 0px;
+  font-family: "Work Sans", sans-serif;
+  background-color: rgba(255, 68, 0, 0.063);
+}
