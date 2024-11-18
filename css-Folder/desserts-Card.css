@@ -30,7 +30,7 @@ img {
   top: 58%;
   left: 17px;
   position: absolute;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .add:hover {
