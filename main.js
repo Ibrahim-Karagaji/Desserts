@@ -1,3 +1,5 @@
+let prepareTheOrder = document.getElementById("prepare");
+
 let waffie = document.getElementById("waffie");
 
 let waffieplas = document.createElement("span");
@@ -25,12 +27,17 @@ waffie.onclick = function () {
   waffie.appendChild(waffieplas);
   waffie.appendChild(waffieNumberOfOrders);
   waffie.appendChild(waffieminus);
+  if (waffieNumberOfOrders.textContent == '1')
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 waffieplas.onclick = function (e) {
   e.stopPropagation();
   waffieNumberOfOrders.textContent =
     Number(waffieNumberOfOrders.textContent) + 1;
+  prepareTheOrder.children[0].children[0].textContent =
+    Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 waffieminus.onclick = function (e) {
@@ -53,7 +60,12 @@ waffieminus.onclick = function (e) {
     waffie.style.alignItems = "center";
     waffieNumberOfOrders.textContent =
       Number(waffieNumberOfOrders.textContent) + 1;
+    if (prepareTheOrder.children[0].children[0].textContent == "0")
+      prepareTheOrder.children[0].children[0].textContent = `0`;
   }
+  if (prepareTheOrder.children[0].children[0].textContent != "0")
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) - 1;
 };
 
 let creme_brulee = document.getElementById("creme_brulee");
@@ -83,12 +95,17 @@ creme_brulee.onclick = function () {
   creme_brulee.appendChild(creme_bruleeplas);
   creme_brulee.appendChild(creme_bruleeNumberOfOrders);
   creme_brulee.appendChild(creme_bruleeminus);
+  if (creme_bruleeNumberOfOrders.textContent == '1')
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 creme_bruleeplas.onclick = function (e) {
   e.stopPropagation();
   creme_bruleeNumberOfOrders.textContent =
     Number(creme_bruleeNumberOfOrders.textContent) + 1;
+  prepareTheOrder.children[0].children[0].textContent =
+    Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 creme_bruleeminus.onclick = function (e) {
@@ -111,7 +128,12 @@ creme_bruleeminus.onclick = function (e) {
     creme_brulee.style.alignItems = "center";
     creme_bruleeNumberOfOrders.textContent =
       Number(creme_bruleeNumberOfOrders.textContent) + 1;
+    if (prepareTheOrder.children[0].children[0].textContent == "0")
+      prepareTheOrder.children[0].children[0].textContent = `0`;
   }
+  if (prepareTheOrder.children[0].children[0].textContent != "0")
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) - 1;
 };
 
 let macaron = document.getElementById("macaron");
@@ -141,12 +163,17 @@ macaron.onclick = function () {
   macaron.appendChild(macaronplas);
   macaron.appendChild(macaronNumberOfOrders);
   macaron.appendChild(macaronminus);
+  if (macaronNumberOfOrders.textContent == '1')
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 macaronplas.onclick = function (e) {
   e.stopPropagation();
   macaronNumberOfOrders.textContent =
     Number(macaronNumberOfOrders.textContent) + 1;
+  prepareTheOrder.children[0].children[0].textContent =
+    Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 macaronminus.onclick = function (e) {
@@ -169,7 +196,12 @@ macaronminus.onclick = function (e) {
     macaron.style.alignItems = "center";
     macaronNumberOfOrders.textContent =
       Number(macaronNumberOfOrders.textContent) + 1;
+    if (prepareTheOrder.children[0].children[0].textContent == "0")
+      prepareTheOrder.children[0].children[0].textContent = `0`;
   }
+  if (prepareTheOrder.children[0].children[0].textContent != "0")
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) - 1;
 };
 
 let tiramisu = document.getElementById("tiramisu");
@@ -199,12 +231,17 @@ tiramisu.onclick = function () {
   tiramisu.appendChild(tiramisuplas);
   tiramisu.appendChild(tiramisuNumberOfOrders);
   tiramisu.appendChild(tiramisuminus);
+  if (tiramisuNumberOfOrders.textContent == '1')
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 tiramisuplas.onclick = function (e) {
   e.stopPropagation();
   tiramisuNumberOfOrders.textContent =
     Number(tiramisuNumberOfOrders.textContent) + 1;
+  prepareTheOrder.children[0].children[0].textContent =
+    Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 tiramisuminus.onclick = function (e) {
@@ -227,7 +264,12 @@ tiramisuminus.onclick = function (e) {
     tiramisu.style.alignItems = "center";
     tiramisuNumberOfOrders.textContent =
       Number(tiramisuNumberOfOrders.textContent) + 1;
+    if (prepareTheOrder.children[0].children[0].textContent == "0")
+      prepareTheOrder.children[0].children[0].textContent = `0`;
   }
+  if (prepareTheOrder.children[0].children[0].textContent != "0")
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) - 1;
 };
 
 let baklava = document.getElementById("baklava");
@@ -257,12 +299,17 @@ baklava.onclick = function () {
   baklava.appendChild(baklavaplas);
   baklava.appendChild(baklavaNumberOfOrders);
   baklava.appendChild(baklavaminus);
+  if (baklavaNumberOfOrders.textContent == '1')
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 baklavaplas.onclick = function (e) {
   e.stopPropagation();
   baklavaNumberOfOrders.textContent =
     Number(baklavaNumberOfOrders.textContent) + 1;
+  prepareTheOrder.children[0].children[0].textContent =
+    Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 baklavaminus.onclick = function (e) {
@@ -285,7 +332,12 @@ baklavaminus.onclick = function (e) {
     baklava.style.alignItems = "center";
     baklavaNumberOfOrders.textContent =
       Number(baklavaNumberOfOrders.textContent) + 1;
+    if (prepareTheOrder.children[0].children[0].textContent == "0")
+      prepareTheOrder.children[0].children[0].textContent = `0`;
   }
+  if (prepareTheOrder.children[0].children[0].textContent != "0")
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) - 1;
 };
 
 let meringue = document.getElementById("meringue");
@@ -315,12 +367,17 @@ meringue.onclick = function () {
   meringue.appendChild(meringueplas);
   meringue.appendChild(meringueNumberOfOrders);
   meringue.appendChild(meringueminus);
+  if (meringueNumberOfOrders.textContent == '1')
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 meringueplas.onclick = function (e) {
   e.stopPropagation();
   meringueNumberOfOrders.textContent =
     Number(meringueNumberOfOrders.textContent) + 1;
+  prepareTheOrder.children[0].children[0].textContent =
+    Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 meringueminus.onclick = function (e) {
@@ -343,7 +400,12 @@ meringueminus.onclick = function (e) {
     meringue.style.alignItems = "center";
     meringueNumberOfOrders.textContent =
       Number(meringueNumberOfOrders.textContent) + 1;
+    if (prepareTheOrder.children[0].children[0].textContent == "0")
+      prepareTheOrder.children[0].children[0].textContent = `0`;
   }
+  if (prepareTheOrder.children[0].children[0].textContent != "0")
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) - 1;
 };
 
 let cake = document.getElementById("cake");
@@ -373,11 +435,16 @@ cake.onclick = function () {
   cake.appendChild(cakeplas);
   cake.appendChild(cakeNumberOfOrders);
   cake.appendChild(cakeminus);
+  if (cakeNumberOfOrders.textContent == '1')
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 cakeplas.onclick = function (e) {
   e.stopPropagation();
   cakeNumberOfOrders.textContent = Number(cakeNumberOfOrders.textContent) + 1;
+  prepareTheOrder.children[0].children[0].textContent =
+    Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 cakeminus.onclick = function (e) {
@@ -399,7 +466,12 @@ cakeminus.onclick = function (e) {
     cake.style.justifyContent = "space-around";
     cake.style.alignItems = "center";
     cakeNumberOfOrders.textContent = Number(cakeNumberOfOrders.textContent) + 1;
+    if (prepareTheOrder.children[0].children[0].textContent == "0")
+      prepareTheOrder.children[0].children[0].textContent = `0`;
   }
+  if (prepareTheOrder.children[0].children[0].textContent != "0")
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) - 1;
 };
 
 let brownie = document.getElementById("brownie");
@@ -429,12 +501,17 @@ brownie.onclick = function () {
   brownie.appendChild(brownieplas);
   brownie.appendChild(brownieNumberOfOrders);
   brownie.appendChild(brownieminus);
+  if (brownieNumberOfOrders.textContent == '1')
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 brownieplas.onclick = function (e) {
   e.stopPropagation();
   brownieNumberOfOrders.textContent =
     Number(brownieNumberOfOrders.textContent) + 1;
+  prepareTheOrder.children[0].children[0].textContent =
+    Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 brownieminus.onclick = function (e) {
@@ -457,7 +534,12 @@ brownieminus.onclick = function (e) {
     brownie.style.alignItems = "center";
     brownieNumberOfOrders.textContent =
       Number(brownieNumberOfOrders.textContent) + 1;
+    if (prepareTheOrder.children[0].children[0].textContent == "0")
+      prepareTheOrder.children[0].children[0].textContent = `0`;
   }
+  if (prepareTheOrder.children[0].children[0].textContent != "0")
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) - 1;
 };
 
 let panna_cotta = document.getElementById("panna_cotta");
@@ -487,12 +569,17 @@ panna_cotta.onclick = function () {
   panna_cotta.appendChild(panna_cottaplas);
   panna_cotta.appendChild(panna_cottaNumberOfOrders);
   panna_cotta.appendChild(panna_cottaminus);
+  if (panna_cottaNumberOfOrders.textContent == '1')
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 panna_cottaplas.onclick = function (e) {
   e.stopPropagation();
   panna_cottaNumberOfOrders.textContent =
     Number(panna_cottaNumberOfOrders.textContent) + 1;
+  prepareTheOrder.children[0].children[0].textContent =
+    Number(prepareTheOrder.children[0].children[0].textContent) + 1;
 };
 
 panna_cottaminus.onclick = function (e) {
@@ -515,5 +602,10 @@ panna_cottaminus.onclick = function (e) {
     panna_cotta.style.alignItems = "center";
     panna_cottaNumberOfOrders.textContent =
       Number(panna_cottaNumberOfOrders.textContent) + 1;
+    if (prepareTheOrder.children[0].children[0].textContent == "0")
+      prepareTheOrder.children[0].children[0].textContent = `0`;
   }
+  if (prepareTheOrder.children[0].children[0].textContent != "0")
+    prepareTheOrder.children[0].children[0].textContent =
+      Number(prepareTheOrder.children[0].children[0].textContent) - 1;
 };
