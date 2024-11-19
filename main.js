@@ -1,5 +1,12 @@
 let prepareTheOrder = document.getElementById("prepare");
 
+let cancle = document.createElement("i");
+cancle.className = "fa-solid fa-xmark";
+cancle.style.cssText =
+  "border: solid 2px black; padding: 1px; border-radius: 50%; letter-spacing: 1px; opacity: 40%;";
+
+let waffieprice = document.getElementById("waffieprice");
+
 let waffie = document.getElementById("waffie");
 
 let waffieplas = document.createElement("span");
@@ -30,9 +37,62 @@ waffie.onclick = function () {
   waffie.appendChild(waffieplas);
   waffie.appendChild(waffieNumberOfOrders);
   waffie.appendChild(waffieminus);
-  if (waffieNumberOfOrders.textContent == "1")
+  if (waffieNumberOfOrders.textContent == "1") {
     prepareTheOrder.children[0].children[0].textContent =
       Number(prepareTheOrder.children[0].children[0].textContent) + 1;
+  }
+  if (prepareTheOrder.children[1] instanceof HTMLImageElement != true) {
+    let orderbox = document.createElement("div");
+    orderbox.style.display = "flex";
+    orderbox.style.justifyContent = "space-between";
+    orderbox.style.alignItems = "center";
+    orderbox.style.fontSize = "13px";
+    let titleorder = document.createElement("div");
+    titleorder.style.display = "grid";
+    orderbox.appendChild(titleorder);
+    let ordertopic = document.createElement("h3");
+    let ordertopictext = document.createTextNode(
+      waffieprice.children[0].textContent
+    );
+    ordertopic.appendChild(ordertopictext);
+    titleorder.appendChild(ordertopic);
+    let orderboxordenumbertext = document.createTextNode(
+      `x${waffieNumberOfOrders.textContent} ${waffieprice.children[2].textContent}`
+    );
+    let orderboxordenumber = document.createElement("p");
+    orderboxordenumber.style.fontSize = "13px";
+    orderboxordenumber.style.paddingTop = "5px";
+    orderboxordenumber.style.opacity = "70%";
+    orderboxordenumber.appendChild(orderboxordenumbertext);
+    titleorder.appendChild(orderboxordenumber);
+    orderbox.appendChild(cancle);
+    prepareTheOrder.appendChild(orderbox);
+  } else {
+    prepareTheOrder.removeChild(prepareTheOrder.children[1]);
+    prepareTheOrder.removeChild(prepareTheOrder.children[1]);
+    let orderbox = document.createElement("div");
+    orderbox.style.display = "flex";
+    orderbox.style.justifyContent = "space-between";
+    orderbox.style.alignItems = "center";
+    orderbox.style.fontSize = "13px";
+    let titleorder = document.createElement("div");
+    titleorder.style.display = "grid";
+    orderbox.appendChild(titleorder);
+    let ordertopic = document.createElement("h3");
+    let ordertopictext = document.createTextNode(
+      waffieprice.children[0].textContent
+    );
+    ordertopic.appendChild(ordertopictext);
+    titleorder.appendChild(ordertopic);
+    let orderboxordenumber = document.createElement("p");
+    orderboxordenumber.style.fontSize = "13px";
+    orderboxordenumber.style.paddingTop = "5px";
+    orderboxordenumber.style.opacity = "70%";
+    orderboxordenumber.appendChild(orderboxordenumbertext);
+    titleorder.appendChild(orderboxordenumber);
+    orderbox.appendChild(cancle);
+    prepareTheOrder.appendChild(orderbox);
+  }
 };
 
 waffieplas.onclick = function (e) {
@@ -41,6 +101,8 @@ waffieplas.onclick = function (e) {
     Number(waffieNumberOfOrders.textContent) + 1;
   prepareTheOrder.children[0].children[0].textContent =
     Number(prepareTheOrder.children[0].children[0].textContent) + 1;
+  orderboxordenumbertext.textContent =
+    Number(orderboxordenumbertext.textContent) + 1;
 };
 
 waffieminus.onclick = function (e) {
@@ -84,6 +146,7 @@ creme_bruleeNumberOfOrders.appendChild(document.createTextNode(1));
 let creme_bruleeminus = document.createElement("span");
 creme_bruleeminus.appendChild(document.createTextNode("-"));
 creme_bruleeminus.style.padding = "5px";
+creme_bruleeminus.style.paddingLeft = "30px";
 
 creme_brulee.onclick = function () {
   creme_brulee.innerHTML = "";
@@ -103,6 +166,8 @@ creme_brulee.onclick = function () {
   if (creme_bruleeNumberOfOrders.textContent == "1")
     prepareTheOrder.children[0].children[0].textContent =
       Number(prepareTheOrder.children[0].children[0].textContent) + 1;
+  prepareTheOrder.removeChild(prepareTheOrder.children[1]);
+  prepareTheOrder.removeChild(prepareTheOrder.children[1]);
 };
 
 creme_bruleeplas.onclick = function (e) {
@@ -147,7 +212,6 @@ let macaronplas = document.createElement("span");
 macaronplas.appendChild(document.createTextNode("+"));
 macaronplas.style.padding = "5px";
 macaronplas.style.paddingRight = "30px";
-
 
 let macaronNumberOfOrders = document.createElement("span");
 macaronNumberOfOrders.appendChild(document.createTextNode(1));
@@ -634,3 +698,17 @@ panna_cottaminus.onclick = function (e) {
     prepareTheOrder.children[0].children[0].textContent =
       Number(prepareTheOrder.children[0].children[0].textContent) - 1;
 };
+
+function ChangeColorOfHomePage() {
+  let body = document.querySelector("body");
+  let color = [
+    "rgba(255, 68, 0, 0.038)",
+    "rgb(48 255 0 / 4%)",
+    "rgb(0 20 255 / 4%)",
+    "rgb(255 0 0 / 4%)",
+  ];
+  const randomNumber = Math.floor(Math.random() * color.length);
+  console.log(body.style.backgroundColor = color[randomNumber]);
+}
+
+setInterval(ChangeColorOfHomePage, 1000);
