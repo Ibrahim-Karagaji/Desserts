@@ -1,0 +1,43 @@
+.card {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+img {
+  width: 140px;
+  height: 140px;
+  border-radius: 15px;
+}
+
+#addtion {
+  margin: -20px 0px 0px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 10px;
+  border: solid 1px purple;
+  background-color: #ffffffe6;
+  width: fit-content;
+  padding: 4px;
+  font-size: 12px;
+}
+
+i {
+  color: purple;
+}
+
+#type-and-price {
+  gap: 4px;
+  display: grid;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+#type-and-price span {
+  color: rgba(0, 0, 0, 0.458);
+}
+
+#type-and-price p {
+  color: purple;
+}
