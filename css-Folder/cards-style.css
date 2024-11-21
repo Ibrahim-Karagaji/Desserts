@@ -10,7 +10,7 @@ img {
   border-radius: 15px;
 }
 
-#addtion {
+.addtion {
   margin: -20px 0px 0px 22px;
   display: flex;
   align-items: center;
@@ -27,17 +27,17 @@ i {
   color: purple;
 }
 
-#type-and-price {
+.type-and-price {
   gap: 4px;
   display: grid;
   font-size: 13px;
   margin-top: 2px;
 }
 
-#type-and-price span {
+.type-and-price span {
   color: rgba(0, 0, 0, 0.458);
 }
 
-#type-and-price p {
+.type-and-price p {
   color: purple;
 }
