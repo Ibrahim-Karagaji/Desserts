@@ -1,0 +1,25 @@
+#prepare-order {
+  display: grid;
+  gap: 5px;
+  padding: 10px;
+  background-color: #ffffffe6;
+  border-radius: 10px;
+  height: fit-content;
+  font-size: 14px;
+  justify-items: center;
+  font-weight: bold;
+}
+
+img {
+  width: 130px;
+  height: 130px;
+}
+
+#prepare-order p:first-child {
+  color: purple;
+  font-size: 16px;
+}
+
+#prepare-order p:nth-child(3) {
+  color: rgb(128 0 128 / 68%);
+}

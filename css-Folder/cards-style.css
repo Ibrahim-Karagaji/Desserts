@@ -21,6 +21,29 @@ img {
   width: fit-content;
   padding: 4px;
   font-size: 12px;
+  transition: 0.4s;
+}
+
+.addtion:hover {
+  background-color: purple;
+  border: solid 1px white;
+}
+
+.addtion:hover i {
+  color: white;
+}
+
+.addtion:hover i {
+  color: white;
+}
+
+.addtion:hover p {
+  color: white;
+}
+
+.addtion p {
+  color: purple;
+  font-weight: bold; 
 }
 
 i {
