@@ -11,7 +11,7 @@ img {
 }
 
 .addtion {
-  margin: -20px 0px 0px 22px;
+  margin: -20px 0px 0px 20px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -43,7 +43,7 @@ img {
 
 .addtion p {
   color: purple;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 i {
