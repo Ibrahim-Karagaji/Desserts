@@ -1,5 +1,5 @@
-@import url('prepare-order-style.css');
-@import url('cards-style.css');
+@import url("prepare-order-style.css");
+@import url("cards-style.css");
 
 * {
   padding: 0px;
@@ -11,7 +11,17 @@ body {
   margin: 60px;
   background-color: #ff45001c;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 60% 40%;
+}
+
+@media (max-width: 795px) {
+  body {
+    font-family: "Cairo", sans-serif;
+    margin: 60px;
+    background-color: #ff45001c;
+    display: grid;
+    grid-template-columns: 100%;
+  }
 }
 
 .cards {
@@ -20,8 +30,21 @@ body {
   gap: 15px;
 }
 
-h1{
+@media (max-width: 1101px) {
+  .cards {
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+  }
+}
 
+@media (max-width: 550px) {
+  .cards {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 15px;
+  }
+}
+
+h1 {
   margin-bottom: 10px;
-
 }
