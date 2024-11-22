@@ -1,13 +1,9 @@
-function addingTheOrder(order) {
-    order.innerHTML = "";
-    order.classList.toggle('adeed');
-    
-
+function addingplasMark(i) {
+  let plas = document.createTextNode("+");
+  i.appendChild(plas);
+}
+function addingplasMark(i) {
+  let muins = document.createTextNode("-");
+  i.appendChild(muins);
 }
 
-let i = document.getElementById("waffle-addtion");
-
-i.onclick = function () {
-    addingTheOrder(i);
-    
-};
