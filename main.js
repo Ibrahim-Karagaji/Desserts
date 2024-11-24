@@ -3,6 +3,7 @@ function styleAfterAdd(i) {
   i.style.display = "flex";
   i.style.justifyContent = "space-between";
   i.style.padding = "4px";
+  i.style.gap = "0px";
   i.style.border = "1px solid white";
   i.style.width = "85px";
   i.style.transition = "0s";
@@ -29,11 +30,14 @@ function backToStyleBeforeAdd(i) {
 function plasMark(i) {
   let plas = document.createTextNode("+");
   i.style.color = "white";
+  i.style.flex = "1";
   i.appendChild(plas);
 }
 
 function muinsMark(i) {
   let muins = document.createTextNode("-");
+  i.style.flex = "1";
+  i.style.textAlign = "end";
   i.style.color = "white";
   i.appendChild(muins);
 }
@@ -52,6 +56,16 @@ function addingTheOrder(i, p, n, m) {
   i.appendChild(m);
 }
 
+function increasekTheTotle(i) {
+  i.textContent = Number(i.textContent) + 1;
+}
+
+function ShirnkTheTotle(i) {
+  i.textContent = Number(i.textContent) - 1;
+}
+
+let totleOfOrders = document.getElementById("totleOfOrders");
+
 let waffle = document.getElementById("waffle-addtion");
 
 let waffle_plas = document.createElement("span");
@@ -67,12 +81,15 @@ waffle.onclick = function () {
   if (waffle_numberOfOrders.textContent == "0")
     waffle_numberOfOrders.textContent = "1";
   addingTheOrder(waffle, waffle_plas, waffle_numberOfOrders, waffle_muins);
+  if (totleOfOrders.textContent == "0") increasekTheTotle(totleOfOrders);
+  else totleOfOrders.textContent = Number(totleOfOrders.textContent) + 1;
 };
 
 waffle_plas.onclick = function (e) {
   e.stopPropagation();
   waffle_numberOfOrders.textContent =
     Number(waffle_numberOfOrders.textContent) + 1;
+  increasekTheTotle(totleOfOrders);
 };
 
 waffle_muins.onclick = function (e) {
@@ -80,6 +97,7 @@ waffle_muins.onclick = function (e) {
   waffle_numberOfOrders.textContent =
     Number(waffle_numberOfOrders.textContent) - 1;
   if (waffle_numberOfOrders.textContent == "0") backToStyleBeforeAdd(waffle);
+  ShirnkTheTotle(totleOfOrders);
 };
 
 let creme_brulee = document.getElementById("creme-brulee-addtion");
@@ -102,12 +120,15 @@ creme_brulee.onclick = function () {
     creme_brulee_numberOfOrders,
     creme_brulee_muins
   );
+  if (totleOfOrders.textContent == "0") increasekTheTotle(totleOfOrders);
+  else totleOfOrders.textContent = Number(totleOfOrders.textContent) + 1;
 };
 
 creme_brulee_plas.onclick = function (e) {
   e.stopPropagation();
   creme_brulee_numberOfOrders.textContent =
     Number(creme_brulee_numberOfOrders.textContent) + 1;
+  increasekTheTotle(totleOfOrders);
 };
 
 creme_brulee_muins.onclick = function (e) {
@@ -116,6 +137,7 @@ creme_brulee_muins.onclick = function (e) {
     Number(creme_brulee_numberOfOrders.textContent) - 1;
   if (creme_brulee_numberOfOrders.textContent == "0")
     backToStyleBeforeAdd(creme_brulee);
+  ShirnkTheTotle(totleOfOrders);
 };
 
 let macaron = document.getElementById("macaron-addtion");
@@ -133,12 +155,15 @@ macaron.onclick = function () {
   if (macaron_numberOfOrders.textContent == "0")
     macaron_numberOfOrders.textContent = "1";
   addingTheOrder(macaron, macaron_plas, macaron_numberOfOrders, macaron_muins);
+  if (totleOfOrders.textContent == "0") increasekTheTotle(totleOfOrders);
+  else totleOfOrders.textContent = Number(totleOfOrders.textContent) + 1;
 };
 
 macaron_plas.onclick = function (e) {
   e.stopPropagation();
   macaron_numberOfOrders.textContent =
     Number(macaron_numberOfOrders.textContent) + 1;
+  increasekTheTotle(totleOfOrders);
 };
 
 macaron_muins.onclick = function (e) {
@@ -146,6 +171,7 @@ macaron_muins.onclick = function (e) {
   macaron_numberOfOrders.textContent =
     Number(macaron_numberOfOrders.textContent) - 1;
   if (macaron_numberOfOrders.textContent == "0") backToStyleBeforeAdd(macaron);
+  ShirnkTheTotle(totleOfOrders);
 };
 
 let tiramisu = document.getElementById("addtion-tiramisu");
@@ -168,12 +194,15 @@ tiramisu.onclick = function () {
     tiramisu_numberOfOrders,
     tiramisu_muins
   );
+  if (totleOfOrders.textContent == "0") increasekTheTotle(totleOfOrders);
+  else totleOfOrders.textContent = Number(totleOfOrders.textContent) + 1;
 };
 
 tiramisu_plas.onclick = function (e) {
   e.stopPropagation();
   tiramisu_numberOfOrders.textContent =
     Number(tiramisu_numberOfOrders.textContent) + 1;
+  increasekTheTotle(totleOfOrders);
 };
 
 tiramisu_muins.onclick = function (e) {
@@ -182,6 +211,7 @@ tiramisu_muins.onclick = function (e) {
     Number(tiramisu_numberOfOrders.textContent) - 1;
   if (tiramisu_numberOfOrders.textContent == "0")
     backToStyleBeforeAdd(tiramisu);
+  ShirnkTheTotle(totleOfOrders);
 };
 
 let baklava = document.getElementById("addtion-baklava");
@@ -199,12 +229,15 @@ baklava.onclick = function () {
   if (baklava_numberOfOrders.textContent == "0")
     baklava_numberOfOrders.textContent = "1";
   addingTheOrder(baklava, baklava_plas, baklava_numberOfOrders, baklava_muins);
+  if (totleOfOrders.textContent == "0") increasekTheTotle(totleOfOrders);
+  else totleOfOrders.textContent = Number(totleOfOrders.textContent) + 1;
 };
 
 baklava_plas.onclick = function (e) {
   e.stopPropagation();
   baklava_numberOfOrders.textContent =
     Number(baklava_numberOfOrders.textContent) + 1;
+  increasekTheTotle(totleOfOrders);
 };
 
 baklava_muins.onclick = function (e) {
@@ -212,6 +245,7 @@ baklava_muins.onclick = function (e) {
   baklava_numberOfOrders.textContent =
     Number(baklava_numberOfOrders.textContent) - 1;
   if (baklava_numberOfOrders.textContent == "0") backToStyleBeforeAdd(baklava);
+  ShirnkTheTotle(totleOfOrders);
 };
 
 let meringue = document.getElementById("addtion-meringue");
@@ -234,12 +268,15 @@ meringue.onclick = function () {
     meringue_numberOfOrders,
     meringue_muins
   );
+  if (totleOfOrders.textContent == "0") increasekTheTotle(totleOfOrders);
+  else totleOfOrders.textContent = Number(totleOfOrders.textContent) + 1;
 };
 
 meringue_plas.onclick = function (e) {
   e.stopPropagation();
   meringue_numberOfOrders.textContent =
     Number(meringue_numberOfOrders.textContent) + 1;
+  increasekTheTotle(totleOfOrders);
 };
 
 meringue_muins.onclick = function (e) {
@@ -248,6 +285,7 @@ meringue_muins.onclick = function (e) {
     Number(meringue_numberOfOrders.textContent) - 1;
   if (meringue_numberOfOrders.textContent == "0")
     backToStyleBeforeAdd(meringue);
+  ShirnkTheTotle(totleOfOrders);
 };
 
 let cake = document.getElementById("addtion-cake");
@@ -265,17 +303,21 @@ cake.onclick = function () {
   if (cake_numberOfOrders.textContent == "0")
     cake_numberOfOrders.textContent = "1";
   addingTheOrder(cake, cake_plas, cake_numberOfOrders, cake_muins);
+  if (totleOfOrders.textContent == "0") increasekTheTotle(totleOfOrders);
+  else totleOfOrders.textContent = Number(totleOfOrders.textContent) + 1;
 };
 
 cake_plas.onclick = function (e) {
   e.stopPropagation();
   cake_numberOfOrders.textContent = Number(cake_numberOfOrders.textContent) + 1;
+  increasekTheTotle(totleOfOrders);
 };
 
 cake_muins.onclick = function (e) {
   e.stopPropagation();
   cake_numberOfOrders.textContent = Number(cake_numberOfOrders.textContent) - 1;
   if (cake_numberOfOrders.textContent == "0") backToStyleBeforeAdd(cake);
+  ShirnkTheTotle(totleOfOrders);
 };
 
 let brownie = document.getElementById("addtion-brownie");
@@ -293,12 +335,15 @@ brownie.onclick = function () {
   if (brownie_numberOfOrders.textContent == "0")
     brownie_numberOfOrders.textContent = "1";
   addingTheOrder(brownie, brownie_plas, brownie_numberOfOrders, brownie_muins);
+  if (totleOfOrders.textContent == "0") increasekTheTotle(totleOfOrders);
+  else totleOfOrders.textContent = Number(totleOfOrders.textContent) + 1;
 };
 
 brownie_plas.onclick = function (e) {
   e.stopPropagation();
   brownie_numberOfOrders.textContent =
     Number(brownie_numberOfOrders.textContent) + 1;
+  increasekTheTotle(totleOfOrders);
 };
 
 brownie_muins.onclick = function (e) {
@@ -306,6 +351,7 @@ brownie_muins.onclick = function (e) {
   brownie_numberOfOrders.textContent =
     Number(brownie_numberOfOrders.textContent) - 1;
   if (brownie_numberOfOrders.textContent == "0") backToStyleBeforeAdd(brownie);
+  ShirnkTheTotle(totleOfOrders);
 };
 
 let panna_cotta = document.getElementById("addtion-panna-cotta");
@@ -328,12 +374,15 @@ panna_cotta.onclick = function () {
     panna_cotta_numberOfOrders,
     panna_cotta_muins
   );
+  if (totleOfOrders.textContent == "0") increasekTheTotle(totleOfOrders);
+  else totleOfOrders.textContent = Number(totleOfOrders.textContent) + 1;
 };
 
 panna_cotta_plas.onclick = function (e) {
   e.stopPropagation();
   panna_cotta_numberOfOrders.textContent =
     Number(panna_cotta_numberOfOrders.textContent) + 1;
+  increasekTheTotle(totleOfOrders);
 };
 
 panna_cotta_muins.onclick = function (e) {
@@ -342,4 +391,5 @@ panna_cotta_muins.onclick = function (e) {
     Number(panna_cotta_numberOfOrders.textContent) - 1;
   if (panna_cotta_numberOfOrders.textContent == "0")
     backToStyleBeforeAdd(panna_cotta);
+  ShirnkTheTotle(totleOfOrders);
 };
