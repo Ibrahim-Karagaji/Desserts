@@ -4,6 +4,7 @@ function styleAfterAdd(i) {
   i.style.justifyContent = "space-between";
   i.style.padding = "4px";
   i.style.gap = "0px";
+  i.style.outline = "1px solid purple";
   i.style.border = "1px solid white";
   i.style.width = "85px";
   i.style.transition = "0s";
@@ -15,6 +16,7 @@ function backToStyleBeforeAdd(i) {
   i.style.alignItems = "center";
   i.style.backgroundColor = "white";
   i.style.border = "1px solid purple";
+  i.style.outline = "1px solid white";
   i.style.width = "96px";
   let font = document.createElement("i");
   font.style.color = "purple";

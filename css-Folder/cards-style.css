@@ -17,6 +17,7 @@ img {
   gap: 16px;
   border-radius: 10px;
   border: solid 1px purple;
+  outline: 1px solid white;
   background-color: #ffffffe6;
   width: fit-content;
   padding: 4px;
