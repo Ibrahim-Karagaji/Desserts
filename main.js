@@ -8,6 +8,16 @@ function getOrderName(i) {
   return named.textContent;
 }
 
+function addItemParentStyle(i) {
+  i.style.display = "flex";
+  i.style.borderBottom = "1px solid rgb(238 238 238 / 54%)";
+  i.style.borderRadius = "10px";
+  i.style.backgroundColor = "#eee";
+  i.style.padding = "5px 10px";
+  i.style.width = "100%";
+  i.style.justifyContent = "space-between";
+}
+
 function styleAfterAdd(i) {
   i.style.backgroundColor = "purple";
   i.style.display = "flex";
