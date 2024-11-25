@@ -18,6 +18,20 @@ function addItemParentStyle(i) {
   i.style.justifyContent = "space-between";
 }
 
+function addItemsFristChildChildren(i, price, name) {
+  i.style.display = "grid";
+  i.style.gap = "5px";
+  let orderName = document.createElement("h3");
+  orderName.style.color = "purple";
+  let orderNameValue = document.createTextNode(getOrderName(name));
+  orderName.appendChild(orderNameValue);
+  let priceOrder = document.createElement("p");
+  let priceOrderValue = document.createTextNode(getPriceOfOrder(price));
+  priceOrder.appendChild(priceOrderValue);
+  i.appendChild(orderName);
+  i.appendChild(priceOrder);
+}
+
 function styleAfterAdd(i) {
   i.style.backgroundColor = "purple";
   i.style.display = "flex";
