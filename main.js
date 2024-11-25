@@ -32,6 +32,19 @@ function addItemsFristChildChildren(i, price, name) {
   i.appendChild(priceOrder);
 }
 
+function addItem(i, price, name) {
+  if (i.children[1] instanceof Image) {
+    i.removeChild(i.children[1]);
+    i.removeChild(i.children[1]);
+  }
+  let parent = document.createElement("div");
+  addItemParentStyle(parent);
+  let firstChold = document.createElement("div");
+  addItemsFristChildChildren(firstChold, price, name);
+  parent.appendChild(firstChold);
+  i.appendChild(parent);
+}
+
 function styleAfterAdd(i) {
   i.style.backgroundColor = "purple";
   i.style.display = "flex";
