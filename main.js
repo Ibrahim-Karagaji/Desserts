@@ -3,6 +3,11 @@ function getPriceOfOrder(i) {
   return price.textContent.substring(1);
 }
 
+function getOrderName(i) {
+  let named = document.getElementById(i);
+  return named.textContent;
+}
+
 function styleAfterAdd(i) {
   i.style.backgroundColor = "purple";
   i.style.display = "flex";
