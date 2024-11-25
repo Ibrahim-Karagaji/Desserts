@@ -1,3 +1,8 @@
+function getPriceOfOrder(i) {
+  let price = document.getElementById(i);
+  return price.textContent.substring(1);
+}
+
 function styleAfterAdd(i) {
   i.style.backgroundColor = "purple";
   i.style.display = "flex";
@@ -66,7 +71,7 @@ function ShirnkTheTotle(i) {
   i.textContent = Number(i.textContent) - 1;
 }
 
-let totleOfOrders = document.getElementById("totleOfOrders");
+let prepare_box = document.getElementById("prepare-order");
 
 let waffle = document.getElementById("waffle-addtion");
 
