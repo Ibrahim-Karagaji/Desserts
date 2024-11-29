@@ -15,6 +15,19 @@ function increasekTotleOfOrder(i) {
   id.children[2].appendChild(textnode);
 }
 
+function shirnkTotleOfOrder(i) {
+  let id = document.getElementById(i);
+  let str = id.children[2].textContent;
+  str = str.slice(1);
+  str = Number(str);
+  --str;
+  let back = "x";
+  back += str;
+  let textnode = document.createTextNode(back);
+  id.children[2].textContent = "";
+  id.children[2].appendChild(textnode);
+}
+
 function getPriceOfOrder(i) {
   let price = document.getElementById(i);
   return price.textContent.substring(1);
@@ -181,6 +194,7 @@ waffle_muins.onclick = function (e) {
     Number(waffle_numberOfOrders.textContent) - 1;
   if (waffle_numberOfOrders.textContent == "0") backToStyleBeforeAdd(waffle);
   ShirnkTheTotle(totleOfOrders);
+  shirnkTotleOfOrder(waffle_priceing_id)
 };
 
 let creme_brulee = document.getElementById("creme-brulee-addtion");
