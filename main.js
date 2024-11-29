@@ -2,6 +2,19 @@ function orderTotle(i) {
   return "x" + i;
 }
 
+function increasekTotleOfOrder(i) {
+  let id = document.getElementById(i);
+  let str = id.children[2].textContent;
+  str = str.slice(1);
+  str = Number(str);
+  ++str;
+  let back = "x";
+  back += str;
+  let textnode = document.createTextNode(back);
+  id.children[2].textContent = "";
+  id.children[2].appendChild(textnode);
+}
+
 function getPriceOfOrder(i) {
   let price = document.getElementById(i);
   return price.textContent.substring(1);
@@ -19,12 +32,12 @@ function addItemParentStyle(i) {
   i.style.backgroundColor = "#eee";
   i.style.padding = "5px 10px";
   i.style.width = "100%";
-  i.style.transition = "2s";
   i.style.justifyContent = "space-between";
 }
 
-function addItemsFristChildChildren(i, price, name, totle) {
+function addItemsFristChildChildren(i, price, name, totle, pi) {
   i.style.display = "grid";
+  i.id = pi;
   i.style.gap = "3px";
   let orderName = document.createElement("h3");
   orderName.style.color = "purple";
@@ -42,7 +55,7 @@ function addItemsFristChildChildren(i, price, name, totle) {
   i.appendChild(t);
 }
 
-function addItem(i, price, name, totle) {
+function addItem(i, price, name, totle, pi) {
   if (i.children[1] instanceof Image) {
     i.removeChild(i.children[1]);
     i.removeChild(i.children[1]);
@@ -50,7 +63,7 @@ function addItem(i, price, name, totle) {
   let parent = document.createElement("div");
   addItemParentStyle(parent);
   let firstChold = document.createElement("div");
-  addItemsFristChildChildren(firstChold, price, name, totle);
+  addItemsFristChildChildren(firstChold, price, name, totle, pi);
   parent.appendChild(firstChold);
   i.appendChild(parent);
 }
@@ -126,7 +139,8 @@ function ShirnkTheTotle(i) {
 let prepare_box = document.getElementById("prepare-order");
 
 let waffle = document.getElementById("waffle-addtion");
-let ordersTotle = 0;
+let waffle_ordersTotle = 1;
+let waffle_priceing_id = "waffle-priceing";
 
 let waffle_plas = document.createElement("span");
 plasMark(waffle_plas);
@@ -143,7 +157,14 @@ waffle.onclick = function () {
   addingTheOrder(waffle, waffle_plas, waffle_numberOfOrders, waffle_muins);
   if (totleOfOrders.textContent == "0") increasekTheTotle(totleOfOrders);
   else totleOfOrders.textContent = Number(totleOfOrders.textContent) + 1;
-  addItem(prepare_box, "waffle-price", "waffle-named", ordersTotle);
+  if (waffle_ordersTotle == 1)
+    addItem(
+      prepare_box,
+      "waffle-price",
+      "waffle-named",
+      waffle_ordersTotle,
+      waffle_priceing_id
+    );
 };
 
 waffle_plas.onclick = function (e) {
@@ -151,6 +172,7 @@ waffle_plas.onclick = function (e) {
   waffle_numberOfOrders.textContent =
     Number(waffle_numberOfOrders.textContent) + 1;
   increasekTheTotle(totleOfOrders);
+  increasekTotleOfOrder(waffle_priceing_id);
 };
 
 waffle_muins.onclick = function (e) {
