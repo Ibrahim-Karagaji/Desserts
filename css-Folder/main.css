@@ -6,7 +6,13 @@
 body {
   width: 100%;
   max-width: 1366px;
-  margin: 0px auto;
+  margin: 0 auto;
   font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.pareant {
+  margin: 60px;
+  display: grid;
+  gap: 20px;
 }
