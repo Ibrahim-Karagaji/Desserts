@@ -12,6 +12,11 @@ body {
   background-color: #f26314b8;
 }
 
+h1 {
+  margin: 39px 0px -27px 52px;
+  color:#eee;
+}
+
 .pareant {
   margin: 60px;
   display: grid;
