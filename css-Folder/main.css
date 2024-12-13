@@ -9,10 +9,18 @@ body {
   margin: 0 auto;
   font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  background-color: #f26314b8;
 }
 
 .pareant {
   margin: 60px;
   display: grid;
-  gap: 20px;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 15px;
 }
