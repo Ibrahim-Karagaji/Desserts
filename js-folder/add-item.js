@@ -25,3 +25,21 @@ function descriptioning(e, container) {
   descriptionP.appendChild(descriptionPText);
   e.appendChild(descriptionP);
 }
+
+function addItem(pareant, products) {
+  for (let i = 0; i < products.length; i++) {
+    let container = products[i];
+    let card = document.createElement("div");
+    card.className = "card";
+    let img = document.createElement("img");
+    img.src = container.img;
+    card.appendChild(img);
+    let add = document.createElement("div");
+    addTocart(add);
+    card.appendChild(add);
+    let description = document.createElement("div");
+    descriptioning(description, container);
+    card.appendChild(description);
+    pareant.appendChild(card);
+  }
+}

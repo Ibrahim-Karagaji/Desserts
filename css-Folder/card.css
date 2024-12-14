@@ -1,6 +1,5 @@
 .card {
   background-color: #eee;
-  width: fit-content;
   padding: 13px;
   border-radius: 10px;
   text-align: center;
@@ -32,12 +31,6 @@
   border: 2px solid #f26314b8;
   outline: 2px solid #eee;
   color: #f26314b8;
-}
-
-#description {
-  display: grid;
-  gap: 5px;
-  margin: 10px 0px 5px;
 }
 
 #description {

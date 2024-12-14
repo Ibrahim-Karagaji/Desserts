@@ -1,3 +1,3 @@
-let description = document.getElementById("description");
+let Cards_pareant = document.querySelector(".cards");
 
-console.log(description);
+addItem(Cards_pareant, products);
