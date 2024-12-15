@@ -50,7 +50,7 @@ h1 {
 }
 
 @media (max-width: 600px) {
-  .preparing .img {
+  .preparing img {
     height: 200px;
     width: 180px;
   }

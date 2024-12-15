@@ -11,22 +11,14 @@ function totlesCounter(e, ordersTotle) {
   cartText = document.createTextNode(`Add To Cart (${ordersTotle.totle})`);
   e.style.color = "#f26314b8";
   e.style.fontWeight = "700";
+  e.style.letterSpacing = "3px";
   e.appendChild(cartText);
 }
 
 function preparingImg(e, ordersTotle) {
   e.src = ordersTotle.img;
   e.style.width = "300px";
-  e.style.height = "280px";
+  e.style.height = "260px";
   e.style.margin = "0px auto";
 }
 
-function prepar(pareant, ordersTotle) {
-  preparStyle(pareant);
-  let cart = document.createElement("p");
-  totlesCounter(cart, ordersTotle);
-  let img = document.createElement("img");
-  preparingImg(img, ordersTotle);
-  pareant.appendChild(cart);
-  pareant.appendChild(img);
-}
