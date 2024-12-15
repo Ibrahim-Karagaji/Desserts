@@ -24,8 +24,34 @@ h1 {
   gap: 10px;
 }
 
+@media (max-width: 1000px) {
+  .pareant {
+    grid-template-columns: 100%;
+    gap: 20px;
+  }
+}
+
 .cards {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 15px;
+}
+
+@media (max-width: 1115px) {
+  .cards {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 605px) {
+  .cards {
+    grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .preparing .img {
+    height: 200px;
+    width: 180px;
+  }
 }
