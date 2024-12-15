@@ -1,4 +1,4 @@
 const ordersTotle = {
-  totle: 0.0,
+  totle: 0.00,
   img: "images-Folder/illustration-empty-cart.svg",
 };
