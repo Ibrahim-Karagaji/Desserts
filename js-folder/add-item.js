@@ -21,7 +21,9 @@ function descriptioning(e, container) {
   e.appendChild(span);
 
   let descriptionP = document.createElement("p");
-  let descriptionPText = document.createTextNode(container.price.toFixed(2));
+  let descriptionPText = document.createTextNode(
+    "$" + container.price.toFixed(2)
+  );
   descriptionP.appendChild(descriptionPText);
   e.appendChild(descriptionP);
 }
