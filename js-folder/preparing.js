@@ -18,7 +18,28 @@ function totlesCounter(e, ordersTotle) {
 function preparingImg(e, ordersTotle) {
   e.src = ordersTotle.img;
   e.style.width = "300px";
-  e.style.height = "260px";
+  e.style.height = "235px";
   e.style.margin = "0px auto";
 }
 
+function appearStyle(e) {
+  e.appendChild(document.createTextNode("Your Added Items Will Appear Here"));
+  e.style.margin = "0px auto";
+  e.style.color = "#f26314b8";
+  e.style.letterSpacing = "2px";
+  e.style.fontWeight = "bold";
+  e.style.opacity = "80%";
+}
+
+function prepar(pareant, ordersTotle) {
+  preparStyle(pareant);
+  let cart = document.createElement("p");
+  totlesCounter(cart, ordersTotle);
+  let img = document.createElement("img");
+  preparingImg(img, ordersTotle);
+  let appearing = document.createElement("p");
+  appearStyle(appearing);
+  pareant.appendChild(cart);
+  pareant.appendChild(img);
+  pareant.appendChild(appearing);
+}

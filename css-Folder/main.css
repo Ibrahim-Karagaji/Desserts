@@ -51,7 +51,7 @@ h1 {
 
 @media (max-width: 600px) {
   .preparing img {
-    height: 200px;
-    width: 180px;
+    height: 200px !important;
+    width: 180px !important;
   }
 }
