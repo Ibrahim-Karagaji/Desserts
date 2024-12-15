@@ -20,7 +20,7 @@ h1 {
 .pareant {
   margin: 60px;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 65% 35%;
   gap: 10px;
 }
 
