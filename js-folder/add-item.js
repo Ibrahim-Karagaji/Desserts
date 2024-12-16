@@ -1,14 +1,16 @@
 function addTocart(e) {
-  e.id = "adding";
+  e.className = "adding";
   let icon = document.createElement("i");
   icon.className = "fa-solid fa-basket-shopping";
   e.appendChild(icon);
   let addP = document.createElement("p");
-  e.appendChild(addP.appendChild(document.createTextNode("add To Cart")));
+  addPText = document.createTextNode("add To Cart");
+  addP.appendChild(addPText);
+  e.appendChild(addP);
 }
 
 function descriptioning(e, container) {
-  e.id = "description";
+  e.className = "description";
 
   let h3 = document.createElement("h3");
   let h3Text = document.createTextNode(container.title);

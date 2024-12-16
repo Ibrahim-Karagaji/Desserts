@@ -11,7 +11,7 @@
   border-radius: 10px;
 }
 
-#adding {
+.adding {
   display: flex;
   gap: 5px;
   padding: 3px 7px;
@@ -26,31 +26,31 @@
   transition: 0.3s;
 }
 
-#adding:hover {
+.adding:hover {
   background-color: #eee;
   border: 2px solid #f26314b8;
   outline: 2px solid #eee;
   color: #f26314b8;
 }
 
-#description {
+.description {
   display: grid;
   gap: 5px;
   margin: 10px 0px 5px;
   text-align: left;
 }
 
-#description h3 {
+.description h3 {
   font-weight: 300;
   letter-spacing: 1px;
 }
 
-#description span {
+.description span {
   font-weight: 700;
   letter-spacing: 1px;
 }
 
-#description p {
+.description p {
   color: #f26314b8;
   font-weight: bold;
 }
