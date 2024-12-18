@@ -4,3 +4,9 @@ let Cards_pareant = document.querySelector(".cards");
 
 addItem(Cards_pareant, products);
 prepar(preparing, ordersTotle);
+
+let adding = document.querySelectorAll(".adding");
+
+adding[0].onclick = function () {
+  afterAddToCart(adding[0]);
+};
