@@ -7,6 +7,3 @@ prepar(preparing, ordersTotle);
 
 let adding = document.querySelectorAll(".adding");
 
-adding[0].onclick = function () {
-  afterAddToCart(adding[0]);
-};
