@@ -1,16 +1,9 @@
-let Plus = document.createElement("i");
-let ordernumber = 1;
-let Minus = document.createElement("i");
-
-let num = document.createElement("p");
-let numTextNode = document.createTextNode(ordernumber);
-num.appendChild(numTextNode);
-
 function plus(e) {
   e.className = "fa-solid fa-plus";
   e.style.flex = "1";
   e.style.display = "flex";
   e.style.justifyContent = "start";
+  e.style.zIndex = "33";
   return e;
 }
 
@@ -19,6 +12,7 @@ function minus(e) {
   e.style.flex = "1";
   e.style.display = "flex";
   e.style.justifyContent = "end";
+  e.style.zIndex = "1";
   return e;
 }
 
@@ -29,14 +23,9 @@ function afterAddToCartStyle(e) {
   e.style.color = "#eee";
   e.style.display = "flex";
   e.style.justifyContent = "space-between";
-  e.style.width = "106px";
+  e.style.width = "105px";
   e.style.padding = "3px 5px";
+  e.style.gap = "0px";
 }
 
-function afterAddToCart(e) {
-  e.innerHTML = "";
-  afterAddToCartStyle(e);
-  e.appendChild(plus(Plus));
-  e.appendChild(num);
-  e.appendChild(minus(Minus));
-}
+
