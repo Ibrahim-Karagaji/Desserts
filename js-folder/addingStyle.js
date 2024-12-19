@@ -28,4 +28,21 @@ function afterAddToCartStyle(e) {
   e.style.gap = "0px";
 }
 
-
+function mainStyle(e) {
+  e.innerHTML = "";
+  let p = document.createElement("p");
+  ptext = document.createTextNode("Add To Cart");
+  p.appendChild(ptext);
+  let icon = document.createElement("i");
+  icon.className = "fa-solid fa-basket-shopping";
+  e.appendChild(icon);
+  e.appendChild(p);
+  e.style.backgroundColor = "#f26314b8";
+  e.style.border = "2px solid #eee";
+  e.style.outline = "2px solid #f26314b8";
+  e.style.color = "#eee";
+  e.style.display = "flex";
+  e.style.width = "fit-content";
+  e.style.padding = "3px 7px";
+  e.style.gap = "9px";
+}
