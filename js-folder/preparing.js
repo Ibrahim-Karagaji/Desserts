@@ -60,7 +60,7 @@ function preparBoxesStyle(e) {
   e.style.color = "black";
   e.style.marginTop = "3px";
   e.style.marginBottom = "3px";
-  e.style.padding = "3px";
+  e.style.padding = "7px";
   e.style.backgroundColor = "rgb(128 128 128 / 10%)";
   e.style.borderRadius = "10px";
   e.style.fontSize = "18px";
@@ -70,4 +70,16 @@ function boxStyle(e) {
   e.style.display = "grid";
   e.style.gap = "3px";
 }
+
+function cancleIcon(e) {
+  e.className = "fa-solid fa-xmark cancle";
+  e.style.borderRadius = "50%";
+  e.style.border = "solid 2px #eee";
+  e.style.color = " rgba(242, 99, 20, 0.72)";
+  e.style.outline = "solid 2px rgba(242, 99, 20, 0.72)";
+  e.style.transform = "scaleX(1.15)";
+  e.style.padding = "3px";
+  e.style.transition = ".3s";
+}
+
 
