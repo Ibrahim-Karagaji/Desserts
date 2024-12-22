@@ -18,6 +18,10 @@ creme_Brulee_add.onclick = function () {
   creme_Brulee_add.appendChild(creme_Brulee_Minus);
 };
 
+creme_Brulee_ordersCounter.onclick = function (e) {
+  e.stopPropagation();
+};
+
 creme_Brulee_Plus.onclick = function (e) {
   e.stopPropagation();
   creme_Brulee_ordersCounter.textContent = Number(creme_Brulee_ordersCounter.textContent) + 1;

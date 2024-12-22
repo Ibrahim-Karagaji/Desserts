@@ -18,6 +18,10 @@ Cake_add.onclick = function () {
   Cake_add.appendChild(Cake_Minus);
 };
 
+Cake_ordersCounter.onclick = function (e) {
+  e.stopPropagation();
+};
+
 Cake_Plus.onclick = function (e) {
   e.stopPropagation();
   Cake_ordersCounter.textContent = Number(Cake_ordersCounter.textContent) + 1;

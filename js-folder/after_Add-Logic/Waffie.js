@@ -18,6 +18,10 @@ waffie_add.onclick = function () {
   waffie_add.appendChild(waffie_Minus);
 };
 
+waffie_ordersCounter.onclick = function (e) {
+  e.stopPropagation();
+};
+
 waffie_Plus.onclick = function (e) {
   e.stopPropagation();
   waffie_ordersCounter.textContent =

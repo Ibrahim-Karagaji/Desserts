@@ -18,6 +18,10 @@ Baklava_add.onclick = function () {
   Baklava_add.appendChild(Baklava_Minus);
 };
 
+Baklava_ordersCounter.onclick = function (e) {
+  e.stopPropagation();
+};
+
 Baklava_Plus.onclick = function (e) {
   e.stopPropagation();
   Baklava_ordersCounter.textContent =

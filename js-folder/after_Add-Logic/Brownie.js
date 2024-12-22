@@ -18,6 +18,10 @@ Brownie_add.onclick = function () {
   Brownie_add.appendChild(Brownie_Minus);
 };
 
+Brownie_ordersCounter.onclick = function (e) {
+  e.stopPropagation();
+};
+
 Brownie_Plus.onclick = function (e) {
   e.stopPropagation();
   Brownie_ordersCounter.textContent =

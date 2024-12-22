@@ -18,6 +18,10 @@ Pie_add.onclick = function () {
   Pie_add.appendChild(Pie_Minus);
 };
 
+Pie_ordersCounter.onclick = function (e) {
+  e.stopPropagation();
+};
+
 Pie_Plus.onclick = function (e) {
   e.stopPropagation();
   Pie_ordersCounter.textContent =

@@ -18,6 +18,10 @@ Panna_add.onclick = function () {
   Panna_add.appendChild(Panna_Minus);
 };
 
+Panna_ordersCounter.onclick = function (e) {
+  e.stopPropagation();
+};
+
 Panna_Plus.onclick = function (e) {
   e.stopPropagation();
   Panna_ordersCounter.textContent = Number(Panna_ordersCounter.textContent) + 1;

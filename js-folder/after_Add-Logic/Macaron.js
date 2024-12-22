@@ -18,6 +18,10 @@ Macaron_add.onclick = function () {
   Macaron_add.appendChild(Macaron_Minus);
 };
 
+Macaron_ordersCounter.onclick = function (e) {
+  e.stopPropagation();
+};
+
 Macaron_Plus.onclick = function (e) {
   e.stopPropagation();
   Macaron_ordersCounter.textContent =
