@@ -21,7 +21,7 @@ creme_Brulee_add.onclick = function () {
 creme_Brulee_Plus.onclick = function (e) {
   e.stopPropagation();
   creme_Brulee_ordersCounter.textContent = Number(creme_Brulee_ordersCounter.textContent) + 1;
-};
+ };
 
 creme_Brulee_Minus.onclick = function (e) {
   e.stopPropagation();
@@ -30,4 +30,4 @@ creme_Brulee_Minus.onclick = function (e) {
     mainStyle(creme_Brulee_add);
     creme_Brulee_ordersCounter.textContent = Number(creme_Brulee_ordersCounter.textContent) + 1;
   }
-};
+ };

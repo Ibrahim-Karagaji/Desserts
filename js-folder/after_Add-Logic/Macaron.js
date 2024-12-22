@@ -22,7 +22,7 @@ Macaron_Plus.onclick = function (e) {
   e.stopPropagation();
   Macaron_ordersCounter.textContent =
     Number(Macaron_ordersCounter.textContent) + 1;
-};
+ };
 
 Macaron_Minus.onclick = function (e) {
   e.stopPropagation();
@@ -33,4 +33,4 @@ Macaron_Minus.onclick = function (e) {
     Macaron_ordersCounter.textContent =
       Number(Macaron_ordersCounter.textContent) + 1;
   }
-};
+ };

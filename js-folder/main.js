@@ -7,3 +7,5 @@ prepar(preparing, ordersTotle);
 
 let adding = document.querySelectorAll(".adding");
 
+let totle = document.querySelector(".totle");
+

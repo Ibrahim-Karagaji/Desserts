@@ -22,7 +22,7 @@ Tiramisu_Plus.onclick = function (e) {
   e.stopPropagation();
   Tiramisu_ordersCounter.textContent =
     Number(Tiramisu_ordersCounter.textContent) + 1;
-};
+ };
 
 Tiramisu_Minus.onclick = function (e) {
   e.stopPropagation();
@@ -33,4 +33,4 @@ Tiramisu_Minus.onclick = function (e) {
     Tiramisu_ordersCounter.textContent =
       Number(Tiramisu_ordersCounter.textContent) + 1;
   }
-};
+ };

@@ -9,6 +9,7 @@ function preparStyle(e) {
 
 function totlesCounter(e, ordersTotle) {
   cartText = document.createTextNode(`Add To Cart (${ordersTotle.totle})`);
+  e.className = "totle";
   e.style.color = "#f26314b8";
   e.style.fontWeight = "700";
   e.style.letterSpacing = "3px";

@@ -20,17 +20,15 @@ Panna_add.onclick = function () {
 
 Panna_Plus.onclick = function (e) {
   e.stopPropagation();
-  Panna_ordersCounter.textContent =
-    Number(Panna_ordersCounter.textContent) + 1;
-};
+  Panna_ordersCounter.textContent = Number(Panna_ordersCounter.textContent) + 1;
+ };
 
 Panna_Minus.onclick = function (e) {
   e.stopPropagation();
-  Panna_ordersCounter.textContent =
-    Number(Panna_ordersCounter.textContent) - 1;
+  Panna_ordersCounter.textContent = Number(Panna_ordersCounter.textContent) - 1;
   if (Panna_ordersCounter.textContent == 0) {
     mainStyle(Panna_add);
     Panna_ordersCounter.textContent =
       Number(Panna_ordersCounter.textContent) + 1;
   }
-};
+ };

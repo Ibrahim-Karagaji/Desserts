@@ -22,7 +22,7 @@ Brownie_Plus.onclick = function (e) {
   e.stopPropagation();
   Brownie_ordersCounter.textContent =
     Number(Brownie_ordersCounter.textContent) + 1;
-};
+ };
 
 Brownie_Minus.onclick = function (e) {
   e.stopPropagation();
@@ -33,4 +33,4 @@ Brownie_Minus.onclick = function (e) {
     Brownie_ordersCounter.textContent =
       Number(Brownie_ordersCounter.textContent) + 1;
   }
-};
+ };

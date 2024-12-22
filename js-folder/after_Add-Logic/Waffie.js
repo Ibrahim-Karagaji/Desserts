@@ -20,14 +20,17 @@ waffie_add.onclick = function () {
 
 waffie_Plus.onclick = function (e) {
   e.stopPropagation();
-  waffie_ordersCounter.textContent = Number(waffie_ordersCounter.textContent) + 1;
+  waffie_ordersCounter.textContent =
+    Number(waffie_ordersCounter.textContent) + 1;
 };
 
 waffie_Minus.onclick = function (e) {
   e.stopPropagation();
-  waffie_ordersCounter.textContent = Number(waffie_ordersCounter.textContent) - 1;
+  waffie_ordersCounter.textContent =
+    Number(waffie_ordersCounter.textContent) - 1;
   if (waffie_ordersCounter.textContent == 0) {
     mainStyle(waffie_add);
-    waffie_ordersCounter.textContent = Number(waffie_ordersCounter.textContent) + 1;
+    waffie_ordersCounter.textContent =
+      Number(waffie_ordersCounter.textContent) + 1;
   }
 };

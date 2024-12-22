@@ -22,7 +22,7 @@ Baklava_Plus.onclick = function (e) {
   e.stopPropagation();
   Baklava_ordersCounter.textContent =
     Number(Baklava_ordersCounter.textContent) + 1;
-};
+ };
 
 Baklava_Minus.onclick = function (e) {
   e.stopPropagation();
@@ -33,4 +33,4 @@ Baklava_Minus.onclick = function (e) {
     Baklava_ordersCounter.textContent =
       Number(Baklava_ordersCounter.textContent) + 1;
   }
-};
+ };

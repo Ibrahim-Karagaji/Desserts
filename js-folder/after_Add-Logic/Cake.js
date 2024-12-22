@@ -20,17 +20,14 @@ Cake_add.onclick = function () {
 
 Cake_Plus.onclick = function (e) {
   e.stopPropagation();
-  Cake_ordersCounter.textContent =
-    Number(Cake_ordersCounter.textContent) + 1;
-};
+  Cake_ordersCounter.textContent = Number(Cake_ordersCounter.textContent) + 1;
+ };
 
 Cake_Minus.onclick = function (e) {
   e.stopPropagation();
-  Cake_ordersCounter.textContent =
-    Number(Cake_ordersCounter.textContent) - 1;
+  Cake_ordersCounter.textContent = Number(Cake_ordersCounter.textContent) - 1;
   if (Cake_ordersCounter.textContent == 0) {
     mainStyle(Cake_add);
-    Cake_ordersCounter.textContent =
-      Number(Cake_ordersCounter.textContent) + 1;
+    Cake_ordersCounter.textContent = Number(Cake_ordersCounter.textContent) + 1;
   }
-};
+ };

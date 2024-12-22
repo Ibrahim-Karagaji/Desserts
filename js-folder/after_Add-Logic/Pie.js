@@ -22,7 +22,7 @@ Pie_Plus.onclick = function (e) {
   e.stopPropagation();
   Pie_ordersCounter.textContent =
     Number(Pie_ordersCounter.textContent) + 1;
-};
+ };
 
 Pie_Minus.onclick = function (e) {
   e.stopPropagation();
@@ -33,4 +33,4 @@ Pie_Minus.onclick = function (e) {
     Pie_ordersCounter.textContent =
       Number(Pie_ordersCounter.textContent) + 1;
   }
-};
+ };
