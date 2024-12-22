@@ -16,6 +16,7 @@ Brownie_add.onclick = function () {
   Brownie_add.appendChild(Brownie_Plus);
   Brownie_add.appendChild(Brownie_ordersCounter);
   Brownie_add.appendChild(Brownie_Minus);
+  IncreaseTotal(totle);
 };
 
 Brownie_ordersCounter.onclick = function (e) {
@@ -26,7 +27,8 @@ Brownie_Plus.onclick = function (e) {
   e.stopPropagation();
   Brownie_ordersCounter.textContent =
     Number(Brownie_ordersCounter.textContent) + 1;
- };
+  IncreaseTotal(totle);
+};
 
 Brownie_Minus.onclick = function (e) {
   e.stopPropagation();
@@ -37,4 +39,5 @@ Brownie_Minus.onclick = function (e) {
     Brownie_ordersCounter.textContent =
       Number(Brownie_ordersCounter.textContent) + 1;
   }
- };
+  ReduceTotal(totle);
+};

@@ -16,6 +16,7 @@ Tiramisu_add.onclick = function () {
   Tiramisu_add.appendChild(Tiramisu_Plus);
   Tiramisu_add.appendChild(Tiramisu_ordersCounter);
   Tiramisu_add.appendChild(Tiramisu_Minus);
+  IncreaseTotal(totle);
 };
 
 Tiramisu_ordersCounter.onclick = function (e) {
@@ -26,6 +27,7 @@ Tiramisu_Plus.onclick = function (e) {
   e.stopPropagation();
   Tiramisu_ordersCounter.textContent =
     Number(Tiramisu_ordersCounter.textContent) + 1;
+  IncreaseTotal(totle);
 };
 
 Tiramisu_Minus.onclick = function (e) {
@@ -37,4 +39,5 @@ Tiramisu_Minus.onclick = function (e) {
     Tiramisu_ordersCounter.textContent =
       Number(Tiramisu_ordersCounter.textContent) + 1;
   }
+  ReduceTotal(totle);
 };

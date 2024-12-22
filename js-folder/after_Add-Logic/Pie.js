@@ -16,6 +16,7 @@ Pie_add.onclick = function () {
   Pie_add.appendChild(Pie_Plus);
   Pie_add.appendChild(Pie_ordersCounter);
   Pie_add.appendChild(Pie_Minus);
+  IncreaseTotal(totle);
 };
 
 Pie_ordersCounter.onclick = function (e) {
@@ -24,17 +25,16 @@ Pie_ordersCounter.onclick = function (e) {
 
 Pie_Plus.onclick = function (e) {
   e.stopPropagation();
-  Pie_ordersCounter.textContent =
-    Number(Pie_ordersCounter.textContent) + 1;
- };
+  Pie_ordersCounter.textContent = Number(Pie_ordersCounter.textContent) + 1;
+  IncreaseTotal(totle);
+};
 
 Pie_Minus.onclick = function (e) {
   e.stopPropagation();
-  Pie_ordersCounter.textContent =
-    Number(Pie_ordersCounter.textContent) - 1;
+  Pie_ordersCounter.textContent = Number(Pie_ordersCounter.textContent) - 1;
   if (Pie_ordersCounter.textContent == 0) {
     mainStyle(Pie_add);
-    Pie_ordersCounter.textContent =
-      Number(Pie_ordersCounter.textContent) + 1;
+    Pie_ordersCounter.textContent = Number(Pie_ordersCounter.textContent) + 1;
   }
- };
+  ReduceTotal(totle);
+};

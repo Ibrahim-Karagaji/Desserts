@@ -16,6 +16,7 @@ Macaron_add.onclick = function () {
   Macaron_add.appendChild(Macaron_Plus);
   Macaron_add.appendChild(Macaron_ordersCounter);
   Macaron_add.appendChild(Macaron_Minus);
+  IncreaseTotal(totle);
 };
 
 Macaron_ordersCounter.onclick = function (e) {
@@ -26,7 +27,8 @@ Macaron_Plus.onclick = function (e) {
   e.stopPropagation();
   Macaron_ordersCounter.textContent =
     Number(Macaron_ordersCounter.textContent) + 1;
- };
+  IncreaseTotal(totle);
+};
 
 Macaron_Minus.onclick = function (e) {
   e.stopPropagation();
@@ -37,4 +39,5 @@ Macaron_Minus.onclick = function (e) {
     Macaron_ordersCounter.textContent =
       Number(Macaron_ordersCounter.textContent) + 1;
   }
- };
+  ReduceTotal(totle);
+};

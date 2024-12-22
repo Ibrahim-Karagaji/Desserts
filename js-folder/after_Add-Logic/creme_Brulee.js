@@ -16,6 +16,7 @@ creme_Brulee_add.onclick = function () {
   creme_Brulee_add.appendChild(creme_Brulee_Plus);
   creme_Brulee_add.appendChild(creme_Brulee_ordersCounter);
   creme_Brulee_add.appendChild(creme_Brulee_Minus);
+  IncreaseTotal(totle);
 };
 
 creme_Brulee_ordersCounter.onclick = function (e) {
@@ -24,14 +25,19 @@ creme_Brulee_ordersCounter.onclick = function (e) {
 
 creme_Brulee_Plus.onclick = function (e) {
   e.stopPropagation();
-  creme_Brulee_ordersCounter.textContent = Number(creme_Brulee_ordersCounter.textContent) + 1;
- };
+  creme_Brulee_ordersCounter.textContent =
+    Number(creme_Brulee_ordersCounter.textContent) + 1;
+  IncreaseTotal(totle);
+};
 
 creme_Brulee_Minus.onclick = function (e) {
   e.stopPropagation();
-  creme_Brulee_ordersCounter.textContent = Number(creme_Brulee_ordersCounter.textContent) - 1;
+  creme_Brulee_ordersCounter.textContent =
+    Number(creme_Brulee_ordersCounter.textContent) - 1;
   if (creme_Brulee_ordersCounter.textContent == 0) {
     mainStyle(creme_Brulee_add);
-    creme_Brulee_ordersCounter.textContent = Number(creme_Brulee_ordersCounter.textContent) + 1;
+    creme_Brulee_ordersCounter.textContent =
+      Number(creme_Brulee_ordersCounter.textContent) + 1;
   }
- };
+  ReduceTotal(totle);
+};

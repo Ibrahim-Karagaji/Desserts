@@ -16,6 +16,7 @@ waffie_add.onclick = function () {
   waffie_add.appendChild(waffie_Plus);
   waffie_add.appendChild(waffie_ordersCounter);
   waffie_add.appendChild(waffie_Minus);
+  IncreaseTotal(totle);
 };
 
 waffie_ordersCounter.onclick = function (e) {
@@ -26,6 +27,7 @@ waffie_Plus.onclick = function (e) {
   e.stopPropagation();
   waffie_ordersCounter.textContent =
     Number(waffie_ordersCounter.textContent) + 1;
+  IncreaseTotal(totle);
 };
 
 waffie_Minus.onclick = function (e) {
@@ -37,4 +39,5 @@ waffie_Minus.onclick = function (e) {
     waffie_ordersCounter.textContent =
       Number(waffie_ordersCounter.textContent) + 1;
   }
+  ReduceTotal(totle);
 };

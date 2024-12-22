@@ -16,6 +16,7 @@ Cake_add.onclick = function () {
   Cake_add.appendChild(Cake_Plus);
   Cake_add.appendChild(Cake_ordersCounter);
   Cake_add.appendChild(Cake_Minus);
+  IncreaseTotal(totle);
 };
 
 Cake_ordersCounter.onclick = function (e) {
@@ -25,7 +26,8 @@ Cake_ordersCounter.onclick = function (e) {
 Cake_Plus.onclick = function (e) {
   e.stopPropagation();
   Cake_ordersCounter.textContent = Number(Cake_ordersCounter.textContent) + 1;
- };
+  IncreaseTotal(totle);
+};
 
 Cake_Minus.onclick = function (e) {
   e.stopPropagation();
@@ -34,4 +36,5 @@ Cake_Minus.onclick = function (e) {
     mainStyle(Cake_add);
     Cake_ordersCounter.textContent = Number(Cake_ordersCounter.textContent) + 1;
   }
- };
+  ReduceTotal(totle);
+};

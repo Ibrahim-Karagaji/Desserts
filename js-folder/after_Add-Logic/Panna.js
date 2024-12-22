@@ -16,6 +16,7 @@ Panna_add.onclick = function () {
   Panna_add.appendChild(Panna_Plus);
   Panna_add.appendChild(Panna_ordersCounter);
   Panna_add.appendChild(Panna_Minus);
+  IncreaseTotal(totle);
 };
 
 Panna_ordersCounter.onclick = function (e) {
@@ -25,7 +26,8 @@ Panna_ordersCounter.onclick = function (e) {
 Panna_Plus.onclick = function (e) {
   e.stopPropagation();
   Panna_ordersCounter.textContent = Number(Panna_ordersCounter.textContent) + 1;
- };
+  IncreaseTotal(totle);
+};
 
 Panna_Minus.onclick = function (e) {
   e.stopPropagation();
@@ -35,4 +37,5 @@ Panna_Minus.onclick = function (e) {
     Panna_ordersCounter.textContent =
       Number(Panna_ordersCounter.textContent) + 1;
   }
- };
+  ReduceTotal(totle);
+};
