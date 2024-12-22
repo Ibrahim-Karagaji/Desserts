@@ -55,3 +55,10 @@ h1 {
     width: 180px !important;
   }
 }
+
+.cancle:hover {
+  background-color: #f26314b8;
+  color: #eee !important;
+  outline: #eee solid 2px;
+  border: #f26314b8 solid 2px;
+}
