@@ -6,6 +6,7 @@ addItem(Cards_pareant, products);
 prepar(preparing, ordersTotle);
 
 let adding = document.querySelectorAll(".adding");
+let description = document.querySelectorAll(".description");
 
 let totle = document.querySelector(".totle");
 
