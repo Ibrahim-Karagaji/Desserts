@@ -61,28 +61,13 @@ function preparBoxesStyle(e) {
   e.style.marginTop = "3px";
   e.style.marginBottom = "3px";
   e.style.padding = "3px";
-  e.style.backgroundColor = "8080804d";
+  e.style.backgroundColor = "rgb(128 128 128 / 10%)";
   e.style.borderRadius = "10px";
+  e.style.fontSize = "18px";
 }
 
-function preparBoxes(e, name, price) {
-  let boxesPareant = document.createElement("div");
-  boxesPareant.style.borderRadius;
-  preparBoxesStyle(boxesPareant);
-  let box = document.createElement("div");
-  box.style.display = "grid";
-  box.style.gap = "3px";
-  let h3 = document.createElement("h3");
-  let h3Text = document.createTextNode(name);
-  h3.appendChild(h3Text);
-  let p = document.createElement("p");
-  let pText = document.createTextNode(price);
-  p.appendChild(pText);
-  box.appendChild(h3);
-  box.appendChild(p);
-  let cancle = document.createElement("i");
-  cancle.className = "fa-solid fa-xmark cancle";
-  boxesPareant.appendChild(cancle);
-  boxesPareant.appendChild(box);
-  e.appendChild(boxesPareant);
+function boxStyle(e) {
+  e.style.display = "grid";
+  e.style.gap = "3px";
 }
+
