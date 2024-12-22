@@ -17,6 +17,7 @@ Pie_add.onclick = function () {
   Pie_add.appendChild(Pie_ordersCounter);
   Pie_add.appendChild(Pie_Minus);
   IncreaseTotal(totle);
+  preparStyleAfterAddToCart(preparing);
 };
 
 Pie_ordersCounter.onclick = function (e) {

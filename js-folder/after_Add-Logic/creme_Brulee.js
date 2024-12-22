@@ -17,6 +17,7 @@ creme_Brulee_add.onclick = function () {
   creme_Brulee_add.appendChild(creme_Brulee_ordersCounter);
   creme_Brulee_add.appendChild(creme_Brulee_Minus);
   IncreaseTotal(totle);
+  preparStyleAfterAddToCart(preparing);
 };
 
 creme_Brulee_ordersCounter.onclick = function (e) {

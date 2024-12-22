@@ -17,6 +17,7 @@ Panna_add.onclick = function () {
   Panna_add.appendChild(Panna_ordersCounter);
   Panna_add.appendChild(Panna_Minus);
   IncreaseTotal(totle);
+  preparStyleAfterAddToCart(preparing);
 };
 
 Panna_ordersCounter.onclick = function (e) {

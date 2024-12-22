@@ -44,3 +44,11 @@ function prepar(pareant, ordersTotle) {
   pareant.appendChild(img);
   pareant.appendChild(appearing);
 }
+
+function preparStyleAfterAddToCart(e,totle) {
+  if (e.children[1] instanceof HTMLImageElement) {
+    e.removeChild(e.children[1]);
+    e.removeChild(e.children[1]);
+  }
+ 
+}

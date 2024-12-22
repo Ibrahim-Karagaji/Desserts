@@ -17,6 +17,7 @@ Brownie_add.onclick = function () {
   Brownie_add.appendChild(Brownie_ordersCounter);
   Brownie_add.appendChild(Brownie_Minus);
   IncreaseTotal(totle);
+  preparStyleAfterAddToCart(preparing);
 };
 
 Brownie_ordersCounter.onclick = function (e) {

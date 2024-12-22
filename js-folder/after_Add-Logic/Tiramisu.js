@@ -17,6 +17,8 @@ Tiramisu_add.onclick = function () {
   Tiramisu_add.appendChild(Tiramisu_ordersCounter);
   Tiramisu_add.appendChild(Tiramisu_Minus);
   IncreaseTotal(totle);
+  preparStyleAfterAddToCart(preparing);
+
 };
 
 Tiramisu_ordersCounter.onclick = function (e) {

@@ -17,6 +17,7 @@ Macaron_add.onclick = function () {
   Macaron_add.appendChild(Macaron_ordersCounter);
   Macaron_add.appendChild(Macaron_Minus);
   IncreaseTotal(totle);
+  preparStyleAfterAddToCart(preparing);
 };
 
 Macaron_ordersCounter.onclick = function (e) {

@@ -17,6 +17,7 @@ Cake_add.onclick = function () {
   Cake_add.appendChild(Cake_ordersCounter);
   Cake_add.appendChild(Cake_Minus);
   IncreaseTotal(totle);
+  preparStyleAfterAddToCart(preparing);
 };
 
 Cake_ordersCounter.onclick = function (e) {

@@ -17,6 +17,7 @@ Baklava_add.onclick = function () {
   Baklava_add.appendChild(Baklava_ordersCounter);
   Baklava_add.appendChild(Baklava_Minus);
   IncreaseTotal(totle);
+  preparStyleAfterAddToCart(preparing);
 };
 
 Baklava_ordersCounter.onclick = function (e) {

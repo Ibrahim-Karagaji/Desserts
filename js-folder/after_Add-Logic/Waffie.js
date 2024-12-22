@@ -17,6 +17,7 @@ waffie_add.onclick = function () {
   waffie_add.appendChild(waffie_ordersCounter);
   waffie_add.appendChild(waffie_Minus);
   IncreaseTotal(totle);
+  preparStyleAfterAddToCart(preparing);
 };
 
 waffie_ordersCounter.onclick = function (e) {
