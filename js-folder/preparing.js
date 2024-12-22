@@ -82,4 +82,27 @@ function cancleIcon(e) {
   e.style.transition = ".3s";
 }
 
-
+function preparBoxes(e, name, price) {
+  e.style.maxHeight = "450px";
+  e.style.overflow = "auto";
+  let boxesPareant = document.createElement("div");
+  boxesPareant.style.maxHeight;
+  preparBoxesStyle(boxesPareant);
+  let box = document.createElement("div");
+  boxStyle(box);
+  let h3 = document.createElement("p");
+  let h3Text = document.createTextNode(name);
+  h3.appendChild(h3Text);
+  let p = document.createElement("p");
+  p.style.fontWeight = "bold";
+  p.style.color = "rgba(242, 99, 20, 0.72)";
+  let pText = document.createTextNode(price);
+  p.appendChild(pText);
+  box.appendChild(h3);
+  box.appendChild(p);
+  let cancle = document.createElement("i");
+  cancleIcon(cancle);
+  boxesPareant.appendChild(cancle);
+  boxesPareant.appendChild(box);
+  e.appendChild(boxesPareant);
+}
