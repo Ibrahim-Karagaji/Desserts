@@ -1,64 +1,17 @@
 * {
   padding: 0px;
   margin: 0px;
+  font-family: Arial;
 }
 
 body {
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
-  font-family: ui-sans-serif, system-ui, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  background-color: #f26314b8;
+  background-color: cyan;
 }
 
 h1 {
   margin: 39px 0px -27px 52px;
   color: #eee;
-}
-
-.pareant {
-  margin: 60px;
-  display: grid;
-  grid-template-columns: 65% 35%;
-  gap: 10px;
-}
-
-@media (max-width: 1000px) {
-  .pareant {
-    grid-template-columns: 100%;
-    gap: 20px;
-  }
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 15px;
-}
-
-@media (max-width: 1115px) {
-  .cards {
-    grid-template-columns: auto auto;
-  }
-}
-
-@media (max-width: 605px) {
-  .cards {
-    grid-template-columns: auto;
-  }
-}
-
-@media (max-width: 600px) {
-  .preparing img {
-    height: 200px !important;
-    width: 180px !important;
-  }
-}
-
-.cancle:hover {
-  background-color: #f26314b8;
-  color: #eee !important;
-  outline: #eee solid 2px;
-  border: #f26314b8 solid 2px;
 }
