@@ -7,16 +7,20 @@ function createCard(product, parent) {
 
     card.innerHTML = `
     <img src="${counter.img}" />
-    <div class="add-to-cart">
+    <div class="add-to-cart ${counter.id}">
         <i class="fa-solid fa-basket-shopping"></i>
         <p>Add To Cart</p>
     </div>
     <div class="description">
         <h3>${counter.title}</h3>
         <p>${counter.name}</p>
-        <p>${Number(counter.price).toFixed(2)}</p>
+        <p>$${Number(counter.price).toFixed(2)}</p>
     </div>
     `;
     parent.appendChild(card);
+
+    card.children[1].onclick = function () {
+      add(card.children[1], parent);
+    };
   }
 }
