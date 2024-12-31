@@ -24,3 +24,11 @@ function createCard(product, parent) {
     };
   }
 }
+
+function oldStyleOfAdd(e) {
+  e.innerHTML = "";
+  e.innerHTML = `
+    <i class="fa-solid fa-basket-shopping"></i>
+    <p>Add To Cart</p>
+`;
+}

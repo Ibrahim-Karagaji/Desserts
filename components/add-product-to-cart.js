@@ -1,6 +1,6 @@
-function add(e) {
-  e.style.justifyContent = "space-between";
-  e.innerHTML = "";
+function add(added) {
+  added.style.justifyContent = "space-between";
+  added.innerHTML = "";
 
   const plus = document.createElement("p");
   plus.style.flex = "1";
@@ -14,8 +14,20 @@ function add(e) {
   miuns.style.textAlign = "end";
   miuns.style.flex = "1";
 
-  e.appendChild(plus);
-  e.appendChild(counter);
-  e.appendChild(miuns);
+  added.appendChild(plus);
+  added.appendChild(counter);
+  added.appendChild(miuns);
 
+  plus.onclick = function (e) {
+    e.stopPropagation();
+    increaseOrdersTotle(counter);
+  };
+
+  miuns.onclick = function (e) {
+    e.stopPropagation();
+    if (counter.textContent == "1") {
+      oldStyleOfAdd(added);
+      increaseOrdersTotle(counter);
+    } else reductionOrdersTotle(counter);
+  };
 }
