@@ -21,11 +21,13 @@ function createCard(product, parent) {
 
     card.children[1].onclick = function () {
       add(card.children[1]);
+      increaseOrdersTotle(shoping_totle.children[0]);
     };
   }
 }
 
 function oldStyleOfAdd(e) {
+  e.style.gap = "5px";
   e.innerHTML = "";
   e.innerHTML = `
     <i class="fa-solid fa-basket-shopping"></i>

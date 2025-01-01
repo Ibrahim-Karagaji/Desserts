@@ -1,5 +1,5 @@
 function add(added) {
-  added.style.justifyContent = "space-between";
+  added.style.gap = "0px";
   added.innerHTML = "";
 
   const plus = document.createElement("p");
@@ -21,10 +21,16 @@ function add(added) {
   plus.onclick = function (e) {
     e.stopPropagation();
     increaseOrdersTotle(counter);
+    increaseOrdersTotle(shoping_totle.children[0]);
+  };
+
+  counter.onclick = function (e) {
+    e.stopPropagation();
   };
 
   miuns.onclick = function (e) {
     e.stopPropagation();
+    reductionOrdersTotle(shoping_totle.children[0]);
     if (counter.textContent == "1") {
       oldStyleOfAdd(added);
       increaseOrdersTotle(counter);
