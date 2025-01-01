@@ -14,13 +14,13 @@ function createCard(product, parent) {
     <div class="description">
         <h3>${counter.title}</h3>
         <p>${counter.name}</p>
-        <p>$${Number(counter.price).toFixed(2)}</p>
+        <p style="font-weight: bold;">$${Number(counter.price).toFixed(2)}</p>
     </div>
     `;
     parent.appendChild(card);
 
     card.children[1].onclick = function () {
-      add(card.children[1], parent);
+      add(card.children[1]);
     };
   }
 }
