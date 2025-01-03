@@ -143,6 +143,7 @@ img {
   background-color: #dbdbdb;
   padding: 5px;
   border-radius: 5px;
+  border-bottom: 2px solid #777;
 }
 
 .content {
