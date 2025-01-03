@@ -1,5 +1,6 @@
 function add(added, boxCard) {
   let totleing = boxCard.children[0];
+  let removeCard = boxCard.children[1];
 
   added.style.gap = "0px";
   added.innerHTML = "";
