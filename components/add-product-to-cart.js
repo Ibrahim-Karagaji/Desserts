@@ -1,4 +1,6 @@
-function add(added) {
+function add(added, boxCard) {
+  let totleing = boxCard.children[0];
+
   added.style.gap = "0px";
   added.innerHTML = "";
 
@@ -18,22 +20,42 @@ function add(added) {
   added.appendChild(counter);
   added.appendChild(miuns);
 
-  plus.onclick = function (e) {
+  plus.addEventListener("click", function (e) {
     e.stopPropagation();
+
     increaseOrdersTotle(counter);
-    increaseOrdersTotle(shoping_totle.children[0]);
-  };
+
+    if (added.children[0] instanceof HTMLParagraphElement) {
+    } else {
+      increaseOrdersTotle(shoping_totle.children[0]);
+    }
+
+    increaseOrdersTotle(totleing.children[1]);
+  });
 
   counter.onclick = function (e) {
     e.stopPropagation();
   };
 
-  miuns.onclick = function (e) {
+  miuns.addEventListener("click", function (e) {
     e.stopPropagation();
-    reductionOrdersTotle(shoping_totle.children[0]);
+
     if (counter.textContent == "1") {
       oldStyleOfAdd(added);
       increaseOrdersTotle(counter);
     } else reductionOrdersTotle(counter);
-  };
+
+    if (totleing.children[1].textContent == "x1") {
+      shoping_totle.removeChild(boxCard);
+      reductionOrdersTotle(shoping_totle.children[0]);
+    } else {
+      reductionOrdersTotle(totleing.children[1]);
+    }
+
+    if (shoping_totle.children[1] == undefined) {
+      shoping_totle.style.justifyContent = "center";
+      prepareProducts(shoping_totle);
+      shoping_totle.children[1].style.margin = "0 auto";
+    }
+  });
 }

@@ -116,6 +116,9 @@ h1 {
   background-color: #eee;
   border-radius: 5px;
   padding: 10px;
+  width: 100%;
+  max-height: 450px;
+  overflow: auto;
 }
 
 .shoping-totle p:first-of-type {
@@ -126,10 +129,23 @@ h1 {
 
 .shoping-totle p:last-of-type {
   font-weight: bold;
-  opacity: 50%;
 }
 
 img {
   width: 200px;
   height: 200px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dbdbdb;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.content {
+  display: grid;
+  gap: 10px;
 }

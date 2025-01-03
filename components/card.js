@@ -1,6 +1,6 @@
 function createCard(product, parent) {
   for (let i = 0; i < product.length; i++) {
-    counter = product[i];
+    let counter = product[i];
 
     const card = document.createElement("div");
     card.className = "card card" + counter.id;
@@ -20,7 +20,7 @@ function createCard(product, parent) {
     parent.appendChild(card);
 
     card.children[1].onclick = function () {
-      add(card.children[1]);
+      add(card.children[1], box(shoping_totle, product[i].name));
       increaseOrdersTotle(shoping_totle.children[0]);
     };
   }
