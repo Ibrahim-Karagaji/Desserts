@@ -2,6 +2,20 @@ function add(added, boxCard) {
   let totleing = boxCard.children[0];
   let removeCard = boxCard.children[1];
 
+  removeCard.onclick = function (e) {
+    e.stopPropagation();
+
+    shoping_totle.removeChild(boxCard);
+    oldStyleOfAdd(added);
+    reductionOrdersTotle(shoping_totle.children[0]);
+
+    if (shoping_totle.children[1] == undefined) {
+      shoping_totle.style.justifyContent = "center";
+      prepareProducts(shoping_totle);
+      shoping_totle.children[1].style.margin = "0 auto";
+    }
+  };
+
   added.style.gap = "0px";
   added.innerHTML = "";
 
