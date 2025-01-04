@@ -1,20 +1,6 @@
-function add(added, boxCard) {
+function add(added, boxCard, price) {
   let totleing = boxCard.children[0];
   let removeCard = boxCard.children[1];
-
-  removeCard.onclick = function (e) {
-    e.stopPropagation();
-
-    shoping_totle.removeChild(boxCard);
-    oldStyleOfAdd(added);
-    reductionOrdersTotle(shoping_totle.children[0]);
-
-    if (shoping_totle.children[1] == undefined) {
-      shoping_totle.style.justifyContent = "center";
-      prepareProducts(shoping_totle);
-      shoping_totle.children[1].style.margin = "0 auto";
-    }
-  };
 
   added.style.gap = "0px";
   added.innerHTML = "";
@@ -23,7 +9,7 @@ function add(added, boxCard) {
   plus.style.flex = "1";
   plus.innerHTML = `+`;
 
-  let counter = document.createElement("p");
+  const counter = document.createElement("p");
   counter.innerHTML = `1`;
 
   const miuns = document.createElement("p");
@@ -46,6 +32,8 @@ function add(added, boxCard) {
     }
 
     increaseOrdersTotle(totleing.children[1]);
+
+    productsTotle.totle += price;
   });
 
   counter.onclick = function (e) {
@@ -72,5 +60,25 @@ function add(added, boxCard) {
       prepareProducts(shoping_totle);
       shoping_totle.children[1].style.margin = "0 auto";
     }
+
+    productsTotle.totle -= price;
   });
+
+  removeCard.onclick = function (e) {
+    e.stopPropagation();
+
+    for (let q = 1; q <= Number(counter.textContent); q++) {
+      productsTotle.totle -= price;
+    }
+
+    shoping_totle.removeChild(boxCard);
+    oldStyleOfAdd(added);
+    reductionOrdersTotle(shoping_totle.children[0]);
+
+    if (shoping_totle.children[1] == undefined) {
+      shoping_totle.style.justifyContent = "center";
+      prepareProducts(shoping_totle);
+      shoping_totle.children[1].style.margin = "0 auto";
+    }
+  };
 }

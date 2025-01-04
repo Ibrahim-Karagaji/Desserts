@@ -25,6 +25,7 @@ function box(e, productName) {
 
   const cancle = document.createElement("img");
   cancle.src = "images-Folder/icon-remove-item.svg";
+
   cancle.style.width = "13px";
   cancle.style.height = "13px";
   cancle.style.border = "solid 1px #eee";

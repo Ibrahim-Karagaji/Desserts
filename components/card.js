@@ -20,8 +20,13 @@ function createCard(product, parent) {
     parent.appendChild(card);
 
     card.children[1].onclick = function () {
-      add(card.children[1], box(shoping_totle, product[i].name));
+      add(
+        card.children[1],
+        box(shoping_totle, product[i].name),
+        product[i].price
+      );
       increaseOrdersTotle(shoping_totle.children[0]);
+      productsTotle.totle += product[i].price;
     };
   }
 }
