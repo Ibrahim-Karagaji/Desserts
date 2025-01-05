@@ -42,6 +42,10 @@ function box(e, product, com) {
 
     e.appendChild(boxesParent);
     e.appendChild(com);
+
+    const totle = document.querySelector(".the-totle");
+
+    calculateTotle(totle.children[1], product.price);
   } else {
     const box = document.createElement("div");
     box.className = "box";
@@ -70,5 +74,9 @@ function box(e, product, com) {
     box.appendChild(cancle);
 
     e.children[1].appendChild(box);
+
+    const totle = document.querySelector(".the-totle");
+
+    calculateTotle(totle.children[1], product.price);
   }
 }
