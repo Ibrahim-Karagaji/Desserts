@@ -122,8 +122,6 @@ h1 {
 }
 
 .shoping-totle p:first-of-type {
-  margin: 0 auto;
-  letter-spacing: 2px;
   font-weight: bold;
 }
 
@@ -143,10 +141,20 @@ img {
   background-color: #dbdbdb;
   padding: 5px;
   border-radius: 5px;
-  border-bottom: 2px solid #777;
+  border-bottom: 5px solid rgb(0, 140, 140);
 }
 
 .content {
   display: grid;
   gap: 10px;
+}
+
+.cancle {
+  width: 13px;
+  height: 13px;
+  border: solid 1px #eee;
+  padding: 2px;
+  border-radius: 50%;
+  background-color: rgb(0, 140, 140);
+  outline: rgb(0, 140, 140) solid 2px;
 }
