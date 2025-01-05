@@ -1,4 +1,4 @@
-function box(e, productName) {
+function box(e, product, com) {
   e.style.justifyContent = "normal";
 
   if (e.children[1] instanceof HTMLImageElement) {
@@ -6,37 +6,69 @@ function box(e, productName) {
     e.removeChild(e.children[1]);
   }
 
-  const boxCard = document.createElement("div");
-  boxCard.className = "box";
+  if (e.children[1] == undefined) {
+    const boxesParent = document.createElement("div");
+    boxesParent.className = "boxesParent";
+    boxesParent.style.display = "grid";
+    boxesParent.style.gap = "5px";
 
-  const content = document.createElement("div");
-  content.className = "content";
+    const box = document.createElement("div");
+    box.className = "box";
+    box.style.display = "flex";
+    box.style.justifyContent = "space-between";
+    box.style.alignItems = "center";
 
-  const named = document.createElement("p");
-  named.innerHTML = `${productName}`;
+    const content = document.createElement("div");
+    content.className = "content";
 
-  const OrdersTotle = document.createElement("p");
-  OrdersTotle.innerHTML = `x1`;
+    const productName = document.createElement("p");
+    productName.innerHTML = `${product.name}`;
 
-  content.appendChild(named);
-  content.appendChild(OrdersTotle);
+    const productConter = document.createElement("p");
+    productConter.innerHTML = `x1`;
 
-  boxCard.appendChild(content);
+    content.appendChild(productName);
+    content.appendChild(productConter);
 
-  const cancle = document.createElement("img");
-  cancle.src = "images-Folder/icon-remove-item.svg";
+    box.appendChild(content);
 
-  cancle.style.width = "13px";
-  cancle.style.height = "13px";
-  cancle.style.border = "solid 1px #eee";
-  cancle.style.padding = "2px";
-  cancle.style.borderRadius = "50%";
-  cancle.style.backgroundColor = "rgb(0, 140, 140)";
-  cancle.style.outline = "rgb(0, 140, 140) solid 2px";
+    const cancle = document.createElement("img");
+    cancle.className = "cancle";
+    cancle.src = "images-Folder/icon-remove-item.svg";
 
-  boxCard.appendChild(cancle);
+    box.appendChild(cancle);
 
-  e.appendChild(boxCard);
+    boxesParent.appendChild(box);
 
-  return boxCard;
+    e.appendChild(boxesParent);
+    e.appendChild(com);
+  } else {
+    const box = document.createElement("div");
+    box.className = "box";
+    box.style.display = "flex";
+    box.style.justifyContent = "space-between";
+    box.style.alignItems = "center";
+
+    const content = document.createElement("div");
+    content.className = "content";
+
+    const productName = document.createElement("p");
+    productName.innerHTML = `${product.name}`;
+
+    const productConter = document.createElement("p");
+    productConter.innerHTML = `x1`;
+
+    content.appendChild(productName);
+    content.appendChild(productConter);
+
+    box.appendChild(content);
+
+    const cancle = document.createElement("img");
+    cancle.className = "cancle";
+    cancle.src = "images-Folder/icon-remove-item.svg";
+
+    box.appendChild(cancle);
+
+    e.children[1].appendChild(box);
+  }
 }
