@@ -1,6 +1,7 @@
 function add(box, added, shoping_totle) {
-  const info = box.children[0];
   const boxesPareant = shoping_totle.children[1];
+  const info = box.children[0];
+  const remove = box.children[1];
 
   added.style.gap = "0px";
   added.innerHTML = "";
@@ -39,5 +40,16 @@ function add(box, added, shoping_totle) {
       oldStyleOfAdd(added);
       increaseOrdersTotle(counter);
     } else reductionOrdersTotle(counter);
+
+    if (info.children[1].textContent == "x1") {
+      boxesPareant.removeChild(box);
+      reductionOrdersTotle(shoping_totle.children[0]);
+
+      if (boxesPareant.children[0] == undefined) {
+        prepareProducts(shoping_totle);
+        shoping_totle.children[1].style.margin = "0px auto";
+        shoping_totle.children[2].style.margin = "0px auto";
+      }
+    } else reductionOrdersTotle(info.children[1]);
   });
 }
