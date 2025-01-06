@@ -12,11 +12,11 @@ function box(e, product, com) {
     boxesParent.style.display = "grid";
     boxesParent.style.gap = "5px";
 
-    const box = document.createElement("div");
-    box.className = "box";
-    box.style.display = "flex";
-    box.style.justifyContent = "space-between";
-    box.style.alignItems = "center";
+    const productBox = document.createElement("div");
+    productBox.className = "box ";
+    productBox.style.display = "flex";
+    productBox.style.justifyContent = "space-between";
+    productBox.style.alignItems = "center";
 
     const content = document.createElement("div");
     content.className = "content";
@@ -30,28 +30,30 @@ function box(e, product, com) {
     content.appendChild(productName);
     content.appendChild(productConter);
 
-    box.appendChild(content);
+    productBox.appendChild(content);
 
     const cancle = document.createElement("img");
     cancle.className = "cancle";
     cancle.src = "images-Folder/icon-remove-item.svg";
 
-    box.appendChild(cancle);
+    productBox.appendChild(cancle);
 
-    boxesParent.appendChild(box);
+    boxesParent.appendChild(productBox);
 
     e.appendChild(boxesParent);
     e.appendChild(com);
 
-    const totle = document.querySelector(".the-totle");
+    const totle = com.children[0];
 
     calculateTotle(totle.children[1], product.price);
+
+    return productBox;
   } else {
-    const box = document.createElement("div");
-    box.className = "box";
-    box.style.display = "flex";
-    box.style.justifyContent = "space-between";
-    box.style.alignItems = "center";
+    const productBox = document.createElement("div");
+    productBox.className = "box ";
+    productBox.style.display = "flex";
+    productBox.style.justifyContent = "space-between";
+    productBox.style.alignItems = "center";
 
     const content = document.createElement("div");
     content.className = "content";
@@ -65,18 +67,21 @@ function box(e, product, com) {
     content.appendChild(productName);
     content.appendChild(productConter);
 
-    box.appendChild(content);
+    productBox.appendChild(content);
 
     const cancle = document.createElement("img");
     cancle.className = "cancle";
     cancle.src = "images-Folder/icon-remove-item.svg";
 
-    box.appendChild(cancle);
+    productBox.appendChild(cancle);
 
-    e.children[1].appendChild(box);
+    e.children[1].appendChild(productBox);
 
-    const totle = document.querySelector(".the-totle");
+    const epmty = e.children[2];
+    const totle = epmty.children[0];
 
     calculateTotle(totle.children[1], product.price);
+
+    return productBox;
   }
 }
