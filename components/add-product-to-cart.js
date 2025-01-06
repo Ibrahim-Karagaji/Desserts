@@ -1,7 +1,10 @@
-function add(box, added, shoping_totle) {
+function add(box, added, shoping_totle, product) {
   const boxesPareant = shoping_totle.children[1];
   const info = box.children[0];
   const remove = box.children[1];
+
+  const epmty = shoping_totle.children[2];
+  const totle = epmty.children[0];
 
   added.style.gap = "0px";
   added.innerHTML = "";
