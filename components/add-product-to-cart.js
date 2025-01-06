@@ -1,6 +1,6 @@
-function add(added, boxCard, price) {
-  let totleing = boxCard.children[0];
-  let removeCard = boxCard.children[1];
+function add(box, added, shoping_totle) {
+  const info = box.children[0];
+  const boxesPareant = shoping_totle.children[1];
 
   added.style.gap = "0px";
   added.innerHTML = "";
@@ -24,16 +24,8 @@ function add(added, boxCard, price) {
   plus.addEventListener("click", function (e) {
     e.stopPropagation();
 
+    increaseOrdersTotle(info.children[1]);
     increaseOrdersTotle(counter);
-
-    if (added.children[0] instanceof HTMLParagraphElement) {
-    } else {
-      increaseOrdersTotle(shoping_totle.children[0]);
-    }
-
-    increaseOrdersTotle(totleing.children[1]);
-
-    productsTotle.totle += price;
   });
 
   counter.onclick = function (e) {
@@ -47,38 +39,5 @@ function add(added, boxCard, price) {
       oldStyleOfAdd(added);
       increaseOrdersTotle(counter);
     } else reductionOrdersTotle(counter);
-
-    if (totleing.children[1].textContent == "x1") {
-      shoping_totle.removeChild(boxCard);
-      reductionOrdersTotle(shoping_totle.children[0]);
-    } else {
-      reductionOrdersTotle(totleing.children[1]);
-    }
-
-    if (shoping_totle.children[1] == undefined) {
-      shoping_totle.style.justifyContent = "center";
-      prepareProducts(shoping_totle);
-      shoping_totle.children[1].style.margin = "0 auto";
-    }
-
-    productsTotle.totle -= price;
   });
-
-  removeCard.onclick = function (e) {
-    e.stopPropagation();
-
-    for (let q = 1; q <= Number(counter.textContent); q++) {
-      productsTotle.totle -= price;
-    }
-
-    shoping_totle.removeChild(boxCard);
-    oldStyleOfAdd(added);
-    reductionOrdersTotle(shoping_totle.children[0]);
-
-    if (shoping_totle.children[1] == undefined) {
-      shoping_totle.style.justifyContent = "center";
-      prepareProducts(shoping_totle);
-      shoping_totle.children[1].style.margin = "0 auto";
-    }
-  };
 }
