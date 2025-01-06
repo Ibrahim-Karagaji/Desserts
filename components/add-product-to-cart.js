@@ -52,4 +52,19 @@ function add(box, added, shoping_totle) {
       }
     } else reductionOrdersTotle(info.children[1]);
   });
+
+  remove.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    oldStyleOfAdd(added);
+
+    boxesPareant.removeChild(box);
+    reductionOrdersTotle(shoping_totle.children[0]);
+
+    if (boxesPareant.children[0] == undefined) {
+      prepareProducts(shoping_totle);
+      shoping_totle.children[1].style.margin = "0px auto";
+      shoping_totle.children[2].style.margin = "0px auto";
+    }
+  });
 }
