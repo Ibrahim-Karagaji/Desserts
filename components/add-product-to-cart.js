@@ -28,6 +28,8 @@ function add(box, added, shoping_totle, product) {
   plus.addEventListener("click", function (e) {
     e.stopPropagation();
 
+    increaseTotle(totle.children[1], product.price);
+
     increaseOrdersTotle(info.children[1]);
     increaseOrdersTotle(counter);
   });
@@ -38,6 +40,8 @@ function add(box, added, shoping_totle, product) {
 
   miuns.addEventListener("click", function (e) {
     e.stopPropagation();
+
+    reductionTotle(totle.children[1], product.price);
 
     if (counter.textContent == "1") {
       oldStyleOfAdd(added);
@@ -63,6 +67,10 @@ function add(box, added, shoping_totle, product) {
 
     boxesPareant.removeChild(box);
     reductionOrdersTotle(shoping_totle.children[0]);
+
+    for (let g = 1; g <= Number(counter.textContent); g++) {
+      reductionTotle(totle.children[1], product.price);
+    }
 
     if (boxesPareant.children[0] == undefined) {
       prepareProducts(shoping_totle);

@@ -45,7 +45,7 @@ function box(e, product, com) {
 
     const totle = com.children[0];
 
-    calculateTotle(totle.children[1], product.price);
+    increaseTotle(totle.children[1], product.price);
 
     return productBox;
   } else {
@@ -80,7 +80,7 @@ function box(e, product, com) {
     const epmty = e.children[2];
     const totle = epmty.children[0];
 
-    calculateTotle(totle.children[1], product.price);
+    increaseTotle(totle.children[1], product.price);
 
     return productBox;
   }

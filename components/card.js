@@ -21,19 +21,18 @@ function createCard(product, parent) {
 
     card.children[1].onclick = function () {
       add(
+        box(shoping_totle, product[i], complate(productsTotle)),
         card.children[1],
-        box(shoping_totle, product[i].name),
-        product[i].price
+        shoping_totle,
+        product[i]
       );
       increaseOrdersTotle(shoping_totle.children[0]);
-      productsTotle.totle += product[i].price;
     };
   }
 }
 
 function oldStyleOfAdd(e) {
   e.style.gap = "5px";
-  e.innerHTML = "";
   e.innerHTML = `
     <i class="fa-solid fa-basket-shopping"></i>
     <p>Add To Cart</p>
