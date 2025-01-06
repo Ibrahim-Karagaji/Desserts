@@ -1,3 +1,4 @@
 function calculateTotle(t, p) {
-  t.textContent = t.textContent.replace(/\d+/, (match) => parseInt(match) + p);
+  const sanatizedPrice = t.textContent.replace("$", "");
+  t.textContent = "$" + (parseInt(sanatizedPrice) + Number(p));
 }
