@@ -1,4 +1,4 @@
-function box(e, product, com) {
+function box(e, p, com) {
   e.style.justifyContent = "normal";
 
   if (e.children[1] instanceof HTMLImageElement) {
@@ -13,7 +13,7 @@ function box(e, product, com) {
     boxesParent.style.gap = "5px";
 
     const productBox = document.createElement("div");
-    productBox.className = "box ";
+    productBox.className = "box";
     productBox.style.display = "flex";
     productBox.style.justifyContent = "space-between";
     productBox.style.alignItems = "center";
@@ -22,7 +22,7 @@ function box(e, product, com) {
     content.className = "content";
 
     const productName = document.createElement("p");
-    productName.innerHTML = `${product.name}`;
+    productName.innerHTML = `${p.name}`;
 
     const productConter = document.createElement("p");
     productConter.innerHTML = `x1`;
@@ -45,12 +45,17 @@ function box(e, product, com) {
 
     const totle = com.children[0];
 
-    increaseTotle(totle.children[1], product.price);
+    increaseTotle(totle.children[1], p.price);
+
+    com.children[2].onclick = function () {
+      finishOrders(boxesParent, product, com);
+      document.body.style.opacity = "80%";
+    };
 
     return productBox;
   } else {
     const productBox = document.createElement("div");
-    productBox.className = "box ";
+    productBox.className = "box";
     productBox.style.display = "flex";
     productBox.style.justifyContent = "space-between";
     productBox.style.alignItems = "center";
@@ -59,7 +64,7 @@ function box(e, product, com) {
     content.className = "content";
 
     const productName = document.createElement("p");
-    productName.innerHTML = `${product.name}`;
+    productName.innerHTML = `${p.name}`;
 
     const productConter = document.createElement("p");
     productConter.innerHTML = `x1`;
@@ -80,7 +85,7 @@ function box(e, product, com) {
     const epmty = e.children[2];
     const totle = epmty.children[0];
 
-    increaseTotle(totle.children[1], product.price);
+    increaseTotle(totle.children[1], p.price);
 
     return productBox;
   }
