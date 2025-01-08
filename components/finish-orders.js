@@ -19,7 +19,7 @@ function finishOrders(boxesPareant, p, com) {
     box.style.alignItems = "center";
     box.style.gap = "5px";
     box.style.padding = "5px";
-    box.style.borderBottom = "rgb(0, 140, 140) 1px solid";
+    box.style.borderBottom = "rgb(0, 140, 140) 2px solid";
 
     let epmty = boxesPareant.children[x];
 
@@ -82,10 +82,11 @@ function finishOrders(boxesPareant, p, com) {
     successful.style.opacity = "100%";
 
     document.body.appendChild(successful);
+    document.body.children[0].style.opacity = "0%";
 
     elementParent.style.transition = ".5s";
     elementParent.style.opacity = "0%";
-    dialog.style.transition = "1s";
+    dialog.style.transition = ".5s";
     dialog.style.opacity = "0%";
 
     setTimeout(function () {
