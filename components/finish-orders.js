@@ -30,7 +30,7 @@ function finishOrders(boxesPareant, p, com) {
         box.innerHTML = `
         <img src="${p[s].img}"/>
         <div style="display:grid; gap:10px;"> 
-          <p>${p[s].name}</p>
+          <p style="font-weight: bold;">${p[s].name}</p>
           <div style="display: flex; gap:15px;">
             <p>${content.children[1].textContent}</p>
             <p>@ $${p[s].price}</p>
@@ -53,7 +53,7 @@ function finishOrders(boxesPareant, p, com) {
 
   const w = com.children[0];
 
-  ordersTotle.innerHTML = `<p>Order Totle</p> <h2> ${w.children[1].textContent} </h2>`;
+  ordersTotle.innerHTML = `<p style="font-weight: bold;">Order Totle</p> <h2> ${w.children[1].textContent} </h2>`;
 
   father.appendChild(ordersTotle);
 
