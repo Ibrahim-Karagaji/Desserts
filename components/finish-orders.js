@@ -83,7 +83,6 @@ function finishOrders(boxesPareant, p, com) {
 
     document.body.appendChild(successful);
     document.body.children[0].style.opacity = "0%";
-    document.body.children[0].style.height = "100vh";
 
     elementParent.style.transition = ".5s";
     elementParent.style.opacity = "0%";
