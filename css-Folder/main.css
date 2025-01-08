@@ -134,6 +134,15 @@ h1 {
   overflow: auto;
 }
 
+.shoping-totle .first {
+  margin: 0px auto;
+}
+
+@media (max-width: 600px) {
+  .shoping-totle {
+    width: fit-content;
+  }
+}
 .shoping-totle::-webkit-scrollbar {
   width: 12px;
   background-color: #eee;

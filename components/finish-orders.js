@@ -73,7 +73,7 @@ function finishOrders(boxesPareant, p, com) {
   successful.style.width = "200px";
   successful.style.position = "fixed";
   successful.style.top = "35%";
-  successful.style.left = "40%";
+  successful.style.left = "35%";
   successful.style.height = "200px";
   successful.style.zIndex = "50";
   successful.style.opacity = "0%";
