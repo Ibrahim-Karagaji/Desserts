@@ -71,7 +71,7 @@ function finishOrders(boxesPareant, p, com) {
   const successful = document.createElement("img");
   successful.src = "images-Folder/icon-order-confirmed.svg";
   successful.style.width = "200px";
-  successful.style.position = "absolute";
+  successful.style.position = "fixed";
   successful.style.top = "35%";
   successful.style.left = "40%";
   successful.style.height = "200px";
@@ -83,6 +83,7 @@ function finishOrders(boxesPareant, p, com) {
 
     document.body.appendChild(successful);
     document.body.children[0].style.opacity = "0%";
+    document.body.children[0].style.height = "100vh";
 
     elementParent.style.transition = ".5s";
     elementParent.style.opacity = "0%";
